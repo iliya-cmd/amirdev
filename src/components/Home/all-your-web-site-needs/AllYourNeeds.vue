@@ -128,7 +128,20 @@ export default {
 
         .all-needs-container{
             // margin-top: 900px;
+            padding: 80px 21px 90px !important;
 
+            h3{
+              font-size: 30px !important;
+            }
+
+            span.website-pinked{
+              font-size: 30px !important;
+
+            }
+
+            img.phone{
+              margin-bottom: 30px;
+            }
         }
     }
 </style>

@@ -38,7 +38,6 @@ export default {
     }
   },
   mounted () {
-    console.clear()
     this.$el.style.cssText = `
       transform-origin: center;
       will-change: transform;

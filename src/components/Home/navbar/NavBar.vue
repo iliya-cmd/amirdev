@@ -86,7 +86,7 @@ $spacer : 10px;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.5) ;
+    background-color: rgba($color: #222222, $alpha: 0.5) ;
     filter: blur(2px);
     z-index: 20;
   }
@@ -132,15 +132,20 @@ $spacer : 10px;
         outline:none;
     }
     .burger-icon{
-     background-color: #ffffff;
-     display: block;
-     width: 33px;
-     height: 4px;
-     margin-bottom: 5px;
-     position: relative;
-     border-radius: 3px;
-     z-index: 4;
-     outline:none;
+      background-color: #ffffff;
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      border-radius: 3px;
+      z-index: 4;
+      outline:none;
+
+      &:nth-child(3){
+        margin-bottom: 0px !important;
+
+      }
     }
   }
 
@@ -222,7 +227,7 @@ $spacer : 10px;
   }
 
   .navbar{
-    background-color: rgba($color: #000000, $alpha: 0.6) ;
+    background-color: rgba($color: #222222, $alpha: 0.6) ;
     // filter: blur(5px);
     height: 55px;
     padding-top: 0 !important;
@@ -274,12 +279,29 @@ $spacer : 10px;
       margin-left: 5px !important;
     }
 
+    .hamb-nav-links-row{
+      height: 50px;
+      padding: 0px 0!important;
+    }
+
     div nav .hamb-nav-links-div{
       display: block !important;
+      // padding-top: 10px !important;
+      padding-bottom: 10px !important;
 
+        .router-link-active{
+            background-color: rgba($color: #ffffff, $alpha: 0.9) !important;
+        }
       .nav-main-link{
         width: 100% !important;
+        height: 50px !important;
         padding-left: 20px !important;
+        border-radius: 0 !important;
+
+        &:hover{
+
+        }
+
 
       }
     }

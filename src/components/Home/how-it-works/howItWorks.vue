@@ -166,6 +166,25 @@ export default {
     }
 
     .top-heading{
+      font-size: 2.1rem !important;
+    }
+
+    .how-it-works-pinked{
+      font-size: 2.1rem !important;
+
+    }
+}
+@media (max-width: 500px){
+    .card-container{
+        width: 100% !important;
+        margin-bottom:40px;
+    }
+
+    .all-cards-container-div{
+      padding: 0 21px !important;
+    }
+
+    .top-heading{
       font-size: 1.7rem !important;
     }
 

@@ -205,11 +205,21 @@ export default {
 
     .top-heading{
       font-size: 2rem !important;
+      padding-bottom: 0px !important;
+
     }
 
     .how-it-works-pinked{
       font-size: 2rem !important;
+      padding-bottom: 0px !important;
 
     }
+}
+
+@media (min-width: 1370px){
+
+  .top-heading{
+      padding-top: 110px !important;
+  }
 }
 </style>

@@ -48,6 +48,8 @@ export default {
 
     .skill-container{
 
+        padding: 50px 0 ;
+
         .skill-left-section{
             width: 55%;
             padding: 20px 10px 20px 49px;
@@ -73,6 +75,7 @@ export default {
                 color: #9B9B9B;
                 font-size: 1.3rem;
                 font-weight: 400;
+                text-align: left ;
                 margin-bottom: 40px;
 
             }
@@ -152,12 +155,12 @@ export default {
 
             .skill-left-section{
                 width: 100%;
-                padding-left: 15px !important;
+                padding-left: 21px !important;
             }
 
             .skill-right-section{
                 width: 100%;
-                padding-left: 50px;
+                padding-left: 21px;
             }
         }
     }

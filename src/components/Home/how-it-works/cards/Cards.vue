@@ -175,5 +175,12 @@ export default {
    .card-div{
         height: auto !important;
     }
+
+    .card-heading-1{
+      font-size: 22px !important;
+    }
+    .card-heading-2{
+      font-size: 20px !important;
+    }
 }
 </style>

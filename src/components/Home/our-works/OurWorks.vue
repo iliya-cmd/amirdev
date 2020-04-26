@@ -328,20 +328,113 @@ export default {
     }
 
     @media (max-width: '750px') {
+        .our-work-heading{
+            font-size: 30px !important;
+            padding: 0 21px !important;
+        }
+
+
+
+        .our-work-container{
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
         .our-work-card{
             width: 75% !important;
+            margin-top: 40px !important;
+            margin-bottom: 0 !important;
         }
     }
 
     @media (max-width: '650px') {
         .our-work-card{
             width: 85% !important;
+            padding-left: 15px !important ;
+        }
+
+        .video-holder{
+            border-radius: 15px;
+            width: 340px !important;
+            height: 320px !important;
+        }
+
+        .our-work-img{
+            position: relative;
+            left: 0px !important;
+            top: 0px !important;
+            width: 340px !important;
+            height: 300px !important;
+
+        }
+
+        .description{
+            display: flex;
+            z-index: -1000;
+            width: 440px;
+            height: 38px !important;
+
+            h6{
+
+                font-size: 14px !important;
+
+            }
+
+            div.made-with{
+                justify-content: flex-start !important;
+            }
+
+            p{
+
+                font-size: 12px !important;
+                padding: 2px 6px !important;
+
+            }
         }
     }
 
     @media (max-width: '550px') {
         .our-work-card{
-            width: 95% !important;
+            width: 85% !important;
+            padding-left: 15px !important ;
+        }
+
+        .video-holder{
+            border-radius: 15px;
+            width: 340px !important;
+            height: 320px !important;
+        }
+
+        .our-work-img{
+            position: relative;
+            left: 0px !important;
+            top: 0px !important;
+            width: 340px !important;
+            height: 300px !important;
+
+        }
+
+        .description{
+            display: flex;
+            z-index: -1000;
+            width: 440px;
+            height: 38px !important;
+
+            h6{
+
+                font-size: 14px !important;
+
+            }
+
+            div.made-with{
+                justify-content: flex-start !important;
+            }
+
+            p{
+
+                font-size: 12px !important;
+                padding: 2px 6px !important;
+
+            }
         }
     }
 

@@ -290,7 +290,7 @@ export default {
       }
 
       .testimonial-container{
-        width: 100% !important;
+        width: 80% !important;
         height: 350px !important;
 
       }

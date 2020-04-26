@@ -16,8 +16,8 @@ export default {
         left: 0;
         z-index: 1000;
         height: 55px;
-        background-color: #171717;
-        box-shadow: 0px 0px 1px 1px #171717;
+        background-color: #222222;
+        box-shadow: 0px 0px 1px 1px #222222;
         // z-index: ;
     }
 </style>

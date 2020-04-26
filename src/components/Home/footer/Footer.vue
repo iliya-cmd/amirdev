@@ -1,23 +1,25 @@
 <template>
     <footer class="w-100 d-flex footer-container">
 
-        <div class="address-section">
+        <div class="left-footer">
+            <div class="address-section">
 
-            <p class="our-address"> Our Address</p>
+                <p class="our-address"> Our Address</p>
 
-            <p class="address-detail">Ukraine, 02000</p>
-            <p class="address-detail">30Б, Kyiv</p>
-            <p class="address-detail">Lesi Ukrainky Blvd</p>
+                <p class="address-detail">Ukraine, 02000</p>
+                <p class="address-detail">30Б, Kyiv</p>
+                <p class="address-detail">Lesi Ukrainky Blvd</p>
 
-        </div>
+            </div>
 
-        <div class="contact-section">
+            <div class="contact-section">
 
-            <p class="our-contacts"> Our Contacts</p>
+                <p class="our-contacts"> Our Contacts</p>
 
-            <p class="contacts-detail">am.amirmohseni@gmail.com</p>
-            <p class="contacts-detail">+380 97 913 0636</p>
+                <p class="contacts-detail">am.amirmohseni@gmail.com</p>
+                <p class="contacts-detail">+380 97 913 0636</p>
 
+            </div>
         </div>
 
         <div class="social-media">
@@ -58,47 +60,53 @@ export default {
         justify-content: space-between;
         align-items: flex-start;
 
+        .left-footer{
+            display: flex;
+            width: 66% !important;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
         .address-section{
-            width: 33%;
+            width: 50%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
 
             .our-address{
-                font-size: 0.9rem;
+                font-size: 0.95rem;
                 margin-bottom: 20px;
                 color: #999999;
 
             }
 
             .address-detail{
-                font-size: 1rem;
+                font-size: 0.95rem;
                 padding: 0;
                 margin-bottom: 2px;
-                color: lighten($color: #999999, $amount: 15) ;
+                color: lighten($color: #999999, $amount: 10) ;
 
             }
         }
 
         .contact-section{
-            width: 33%;
+            width: 50%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
 
             .our-contacts{
-                font-size: 0.9rem;
+                font-size: 0.95rem;
                 margin-bottom: 20px;
                 color: #999999;
 
             }
 
             .contacts-detail{
-                font-size: 1rem;
+                font-size: 0.95rem;
                 margin-bottom: 2px;
-                color: lighten($color: #999999, $amount: 15) ;
+                color: lighten($color: #999999, $amount: 10) ;
             }
         }
 
@@ -168,4 +176,103 @@ export default {
         }
     }
 
+@media (max-width:850px){
+
+    .footer-container{
+        // height: auto !important;
+        // width: 100%;
+        // background-color: #222222;
+        // display: flex;
+        // padding: 45px 49px 25px;
+        // justify-content: space-between;
+        align-items: center !important;
+    }
+
+    .left-footer{
+        flex-direction: column !important;
+        width: 45% !important;
+
+        .address-section{
+
+            width: 100% !important;
+
+            .our-address{
+
+                margin-bottom: 15px !important;
+
+            }
+
+        }
+
+        .contact-section{
+            margin-top: 30px;
+            width: 100%!important;
+
+            .our-contacts{
+                margin-bottom: 15px !important;
+            }
+        }
+
+    }
+
+  .social-media{
+
+        width: 55%!important;
+        height: 100% !important;
+        padding-top: 0 !important;
+  }
+}
+
+@media (max-width:570px){
+
+    .footer-container{
+        // height: auto !important;
+        // width: 100%;
+        // background-color: #222222;
+        // display: flex;
+        padding: 45px 21px 85px !important;
+        // justify-content: space-between;
+        align-items: center !important;
+    }
+
+    .left-footer{
+        flex-direction: column !important;
+        width: 45% !important;
+
+        .address-section{
+
+            width: 100% !important;
+
+            .our-address{
+
+                margin-bottom: 15px !important;
+
+            }
+
+        }
+
+        .contact-section{
+            margin-top: 30px;
+            width: 100%!important;
+
+            .our-contacts{
+                margin-bottom: 15px !important;
+            }
+        }
+
+    }
+
+  .social-media{
+
+        width: 55%!important;
+        height: 100% !important;
+        flex-direction: column !important;
+        padding-top: 0 !important;
+        align-items: flex-end !important;
+
+        svg{
+            margin-bottom: 10px;;
+        }
+  }
+}
 </style>

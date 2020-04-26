@@ -1,11 +1,8 @@
 <template>
-    <div  class="contact-container"
-          v-bind:style="{ backgroundPositionY: backY + 'px' }"
-          >
+    <div  class="contact-container">
       <NavPlace/>
       <NavBar/>
-        <div class="contact-content-container"
-        @mousemove="photoChange($event)">
+        <div class="contact-content-container">
           <Contact/>
         </div>
       <div class="contact-footer">
@@ -34,12 +31,6 @@ export default {
 
   },
   methods: {
-    photoChange: function (event) {
-
-      if ( event.target.classList.contains('contact-right-section') || event.target.classList.contains('contact-left-section'))
-      this.backY = - (event.offsetY) / 4
-
-    }
   }
 }
 
@@ -118,12 +109,12 @@ export default {
 
       .contact-footer{
         background-color: #222222;
-        padding-top: 50px;
+        padding-top: 80px;
       }
     }
   }
 
-  @media (max-width: 530px ){
+  @media (max-width: 550px ){
     .contact-container{
       background-attachment: inherit !important;
 
@@ -166,7 +157,7 @@ export default {
 
       .contact-footer{
         background-color: #222222;
-        padding-top: 0px !important;
+        padding-top: 100px !important;
       }
     }
   }
@@ -189,11 +180,11 @@ export default {
           width: 100% !important;
           flex-direction: column-reverse !important;
           justify-content: space-between !important;
-          align-items: center !important;
+          align-items: flex-start !important;
           padding-right: 15px;
           padding-top: 10px !important;
           height: 180px;
-          padding-bottom: 20px;
+          padding-bottom: 0px;
 
           .contact-tooltip{
             display: block !important;
@@ -206,7 +197,7 @@ export default {
           padding-right: 0;
 
           form{
-            padding: 0 !important;
+            padding: 15[x] !important;
             width: 100%;
 
             .contact-form-buttons{
@@ -232,7 +223,7 @@ export default {
 
       .contact-footer{
         background-color: #222222;
-        padding-top: 0px !important;
+        padding-top: 30px !important;
       }
     }
   }

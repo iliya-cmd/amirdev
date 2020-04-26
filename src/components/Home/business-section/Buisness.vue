@@ -289,7 +289,7 @@ export default {
 
             flex-wrap: wrap;
             width: 100% !important;
-            padding: 90px 21px 10px !important;
+            padding: 90px 21px 0px !important;
             margin-top: 0px !important;
             padding-top: 0px;
             justify-content: flex-start !important;
@@ -302,6 +302,11 @@ export default {
             padding-left: 0px !important;
             text-align: center !important;
             margin-bottom: 0 !important;
+
+            h3{
+                width: 100% !important;
+                font-size: 30px !important;
+            }
         }
 
         .business-photo1{
@@ -310,11 +315,12 @@ export default {
             height: 300px !important;
             justify-content: center !important;
             align-items: center !important;
-            margin-bottom: 20px !important;
+            overflow: hidden;
 
             .business-img1{
                 width: 100% !important;
                 height: 300px !important;
+                margin: auto;
                 background-position-x: center !important;
                 background-position-y: center !important;
             }
@@ -338,5 +344,14 @@ export default {
             }
         }
     }
+
+@media (min-width: 1370px){
+
+    .business-container{
+        justify-content: space-between;
+        padding: 200px 49px 10px !important;
+    }
+
+}
 
 </style>

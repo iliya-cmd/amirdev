@@ -289,6 +289,14 @@ export default {
 }
 
 @media (max-width:500px ){
+    .about-our-team-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 21px 20px !important;
+    }
     .about-our-team{
         flex-direction: column;
 

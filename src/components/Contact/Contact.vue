@@ -25,7 +25,7 @@
                   <form method="POST" action="" class="d-flex flex-column w-100 contact-page-form" @submit.prevent="send">
                     <input type="text" placeholder="name" required>
                     <input type="email" placeholder="email" required>
-                    <textarea name="message" id="" cols="30" rows="4" placeholder="message"></textarea>
+                    <textarea name="message" id="" cols="30" rows="3" placeholder="message"></textarea>
                      <div class="d-flex w-100 contact-form-buttons">
                        <button type="submit" class="send-message" >
                             <div class="d-flex w-100" style="justify-content: space-between; align-items: center" v-if="!sending">
@@ -187,11 +187,13 @@ export default {
 
               input{
                 width: 100%;
-                border: 1px solid #000000;
-                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid #000000;
+                // border-radius: 5px;
                 background-color: transparent;
                 margin-bottom: 20px;
-                padding: 12px;
+                padding: 12px 12px 6px;
                 font-size: 14px;
 
                   &:focus{
@@ -223,11 +225,13 @@ export default {
 
               textarea{
                   width: 100%;
-                  border: 1px solid #000000;
-                  border-radius: 5px;
+                  border: none;
+                  outline: none;
+                  border-bottom: 1px solid #000000;
+                  // border-radius: 5px;
                   margin-bottom: 45px;
                   background-color: transparent;
-                  padding: 12px;
+                  padding: 12px 12px 8px;
                   font-size: 14px;
 
                   &:focus{
@@ -261,7 +265,7 @@ export default {
               .contact-form-buttons{
                 justify-content: center;
                 align-items: center;
-                margin-top: 5px;
+                margin-top: 25px;
 
                 .send-message{
                   display: flex;
@@ -327,4 +331,67 @@ export default {
             }
           }
       }
+
+@media (max-width: 550px ){
+
+  .contact-left-section{
+          align-items: flex-start !important;
+          padding-top: 90px !important;
+          padding-left: 21px !important;
+          z-index: 10;
+  }
+
+  .modal-contact-page{
+      padding: 0 0 0 10px;
+      width: 330px !important;
+      height: 400px !important;
+
+      .contact-form-buttons{
+        margin-top: 0px !important;
+
+        .send-message{
+          width: 75% !important;
+        }
+      }
+  }
+}
+
+@media (max-width: 500px ){
+
+  .contact-left-section{
+          align-items: flex-start !important;
+          padding-top: 90px !important;
+          padding-left: 21px !important;
+          z-index: 10;
+  }
+
+  .modal-contact-page{
+      padding: 0 0 0 10px;
+      width: 290px !important;
+      height: 370px !important;
+
+    input{
+      margin-bottom: 15px !important;
+
+    }
+
+    textarea{
+      margin-bottom: 37px !important;
+    }
+      .contact-form-buttons{
+        margin-top: 0px !important;
+
+        .send-message{
+          width: 80% !important;
+          height: 40px !important;
+          font-size: 0.9rem !important;
+          padding: 0 15px !important;
+
+          svg{
+            font-size: 0.9rem !important;
+          }
+        }
+      }
+  }
+}
 </style>
