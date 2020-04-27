@@ -219,7 +219,10 @@ export default {
 @media (min-width: 1370px){
 
   .top-heading{
-      padding-top: 110px !important;
+      padding-top: 90px !important;
+  }
+  .how-it-works-pinked{
+      padding-top: 90px !important;
   }
 }
 </style>

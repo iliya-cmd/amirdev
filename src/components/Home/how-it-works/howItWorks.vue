@@ -34,7 +34,7 @@ export default {
           head1: 'Responsive',
           head2: 'Design',
           icon: 'desktop',
-          delay: 500,
+          delay: 200,
           summerized: 'Our Web Applications are Responsive on every deviece. today one of the biggest factors in google ranking is the responsiveness of your web site',
           content: 'Our Web Applications are Responsive on every deviece. today one of the biggest factors in google ranking is the responsiveness of your web site so it Greatly increases your SEO.'
         },
@@ -42,7 +42,7 @@ export default {
           head1: 'Secure',
           head2: 'Back end',
           icon: 'lock',
-          delay: 700,
+          delay: 400,
           summerized: 'We Provide a highly Secure server side code. Many Tests will be initialized on your web site before we put it into',
           content: 'We Provide a highly Secure server side code. Hackers are everywhere these days so you need a secure site to show that you are Professional.'
         },
@@ -50,7 +50,7 @@ export default {
           head1: 'Speed',
           head2: 'Optimization',
           icon: 'tachometer-alt',
-          delay: 900,
+          delay: 600,
           summerized: 'Having a Fast responding site does a major effect on UI part of your web site. the user wont stay at your site if its slow',
           content: 'Having a Fast responding site does a major effect on UI part of your web site. the user wont stay at your site if its slow. so you want the best responding time cause it\'s Terrible for Your SEO'
         },
@@ -58,7 +58,7 @@ export default {
           head1: 'Respond',
           head2: 'Fast',
           icon: 'sync-alt',
-          delay: 1100,
+          delay: 800,
           summerized: 'SPA sites are growing every day. in these sites, at most of the parts you dont need to refresh the page',
           content: 'SPA sites are growing every day. in these sites, at most of the parts you dont need to refresh the page. The Requests get sent by an Ajax request and user see\'s the respond immediatly.'
         }
@@ -192,5 +192,15 @@ export default {
       font-size: 1.7rem !important;
 
     }
+}
+
+@media (min-width: 1370px){
+
+  .top-heading{
+      padding-top: 90px !important;
+  }
+  .how-it-works-pinked{
+      padding-top: 90px !important;
+  }
 }
 </style>

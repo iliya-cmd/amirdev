@@ -130,7 +130,7 @@ export default {
           .testimonial-head-sub{
             font-size: 1.3rem;
             font-weight: normal;
-            color: #CBC7D6;
+            color: #ffffff !important;
             cursor: default;
 
           }
@@ -165,11 +165,6 @@ export default {
           .flickity-button-icon:hover {
 
             fill: #ffffff;
-          }
-
-          /* hide disabled button */
-          .flickity-button:disabled {
-            // display: none;
           }
 
           .testimonial-container.is-selected{
@@ -227,9 +222,6 @@ export default {
                 margin-bottom: 10px;
             }
 
-            .testimonial-rate{
-
-            }
           }
         }
     }

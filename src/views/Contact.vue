@@ -46,8 +46,8 @@ export default {
     width: 100%;
     z-index: -5;
     background-image: url(~@/assets/contact-map.jpg);
-    background-size: cover;
-    background-position: center;
+    background-size: 100%;
+    background-position: top;
     background-repeat: no-repeat !important;
     background-color: #222222;
 

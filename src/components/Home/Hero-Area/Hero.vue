@@ -115,6 +115,7 @@ export default {
             span{
                 background: linear-gradient(to right, #3ED6D3 , #9548D9 44%);
                 -webkit-background-clip: text;
+                background-clip: content-box !important;
                 -webkit-text-fill-color: transparent;
                 position: absolute;
                 top: 6px;
@@ -161,6 +162,7 @@ export default {
                     color: #ffffff !important;
                     background: transparent !important ;
                     -webkit-background-clip: content-box !important;
+                    background-clip: content-box !important;
                     -webkit-text-fill-color: #ffffff;
                     letter-spacing: 0.005em !important;
                     font-weight: 500;
@@ -218,7 +220,41 @@ export default {
         }
     }
 
-    @media (max-width: 770px){
+    @media (max-width: 985px){
+
+        .hero-container{
+        background-size: 90% !important;
+
+        }
+
+        .hero-first-line{
+            font-size: 2.5rem !important;
+
+        }
+
+        .see-our-work{
+            margin-top: 55px !important;
+        }
+    }
+
+    @media (max-width: 900px){
+
+        .hero-container{
+        background-size: 95% !important;
+
+        }
+
+        .hero-first-line{
+            font-size: 2.5rem !important;
+
+        }
+
+        .see-our-work{
+            margin-top: 55px !important;
+        }
+    }
+
+    @media (max-width: 850px){
 
         .hero-container{
             background-size: 90% !important;
@@ -265,7 +301,101 @@ export default {
         }
     }
 
-    @media (max-width: 540px){
+    @media (max-width: 750px){
+
+        .hero-container{
+            background-size: 95% !important;
+            width: 100%;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .see-our-work{
+            margin-top: 40px !important;
+        }
+
+        .hero-action-button{
+            width: 170px !important;
+            height: 45px !important;
+            margin-top: 40px !important;
+
+            span{
+                font-size: 17px !important;
+                left: 8px !important;
+                top: 6px !important;
+            }
+
+            &:hover{
+                width: 200px !important;
+
+                 span{
+                font-size: 17px !important;
+                left: 12px !important;
+                top: 10px !important;
+                }
+            }
+        }
+
+        .hero-first-line{
+            font-size: 25px !important;
+
+        }
+        .hero-second-line{
+            font-size: 18px !important;
+
+        }
+    }
+
+    @media (max-width: 720px){
+
+        .hero-container{
+            background-size: 100% !important;
+            width: 100%;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .see-our-work{
+            margin-top: 40px !important;
+        }
+
+        .hero-action-button{
+            width: 170px !important;
+            height: 45px !important;
+            margin-top: 40px !important;
+
+            span{
+                font-size: 17px !important;
+                left: 8px !important;
+                top: 6px !important;
+            }
+
+            &:hover{
+                width: 200px !important;
+
+                 span{
+                font-size: 17px !important;
+                left: 12px !important;
+                top: 10px !important;
+                }
+            }
+        }
+
+        .hero-first-line{
+            font-size: 25px !important;
+
+        }
+        .hero-second-line{
+            font-size: 18px !important;
+
+        }
+    }
+
+    @media (max-width: 630px){
 
         .hero-container{
             background-image: url(~@/assets/Hero-back.png);

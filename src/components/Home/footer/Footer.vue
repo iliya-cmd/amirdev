@@ -115,13 +115,14 @@ export default {
             display: flex;
             align-items: center;
             padding-top: 40px;
-            justify-content: space-between;
+            justify-content: flex-end;
 
             .icon{
-                width: 35px !important;
-                height: 35px !important;
+                width: 33px !important;
+                height: 33px !important;
                 padding: 6px;
                 border: 2px solid #808080;
+                margin-left: 35px;
                 border-radius: 10px;
                 color: #808080;
                 transition:

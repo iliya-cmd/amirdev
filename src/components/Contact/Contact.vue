@@ -25,21 +25,31 @@
                   <form method="POST" action="" class="d-flex flex-column w-100 contact-page-form" @submit.prevent="send">
                     <input type="text" placeholder="name" required>
                     <input type="email" placeholder="email" required>
-                    <textarea name="message" id="" cols="30" rows="3" placeholder="message"></textarea>
-                     <div class="d-flex w-100 contact-form-buttons">
-                       <button type="submit" class="send-message" >
-                            <div class="d-flex w-100" style="justify-content: space-between; align-items: center" v-if="!sending">
-                                Send Message
-                                <font-awesome-icon icon="paper-plane"></font-awesome-icon>
-                            </div>
-                            <div class="d-flex w-100" style="justify-content: center; align-items: center" v-if="sending">
-                                <font-awesome-icon
-                                icon="spinner"
-                                class="loading">
-                                </font-awesome-icon>
-                            </div>
-                        </button>
-                     </div>
+                    <textarea name="message" id="" cols="30" rows="1" placeholder="message"></textarea>
+                    <div class="d-flex w-100 contact-form-buttons">
+
+                      <label for="upload">
+                        <font-awesome-icon
+                          icon="cloud-upload-alt"
+                          class="">
+                        </font-awesome-icon>
+                        Upload File
+                      </label>
+                      <input type="file" name="upload" id="upload">
+
+                      <button type="submit" class="send-message" >
+                          <div class="d-flex w-100" style="justify-content: space-between; align-items: center" v-if="!sending">
+                            Send Message
+                            <font-awesome-icon icon="paper-plane"></font-awesome-icon>
+                          </div>
+                          <div class="d-flex w-100" style="justify-content: center; align-items: center" v-if="sending">
+                            <font-awesome-icon
+                            icon="spinner"
+                            class="loading">
+                            </font-awesome-icon>
+                          </div>
+                      </button>
+                    </div>
                   </form>
                 </div>
             </div>
@@ -160,7 +170,7 @@ export default {
             border-radius: 9px;
             padding: 0 0 0 10px;
             cursor: default;
-            width: 360px;
+            width: 380px;
             height: 460px;
             margin-bottom: -40px;
             justify-content: flex-start;
@@ -174,9 +184,9 @@ export default {
               text-align: left;
               padding: 20px 20px 0;
               margin: 0;
-              margin-bottom: -5px;
+              margin-bottom: 15px;
               font-family: 'Helvetica', 'Roboto' !important;
-              font-size: 1rem;
+              font-size: 0.95rem;
               letter-spacing: 0;
               font-weight: 600;
               color: #000000;
@@ -189,11 +199,11 @@ export default {
                 width: 100%;
                 border: none;
                 outline: none;
-                border-bottom: 1px solid #000000;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.6);
                 // border-radius: 5px;
                 background-color: transparent;
-                margin-bottom: 20px;
-                padding: 12px 12px 6px;
+                margin-bottom: 35px;
+                padding: 12px 12px 6px 0;
                 font-size: 14px;
 
                   &:focus{
@@ -205,6 +215,7 @@ export default {
                           font-weight: 600;
                           -webkit-transform: translateX(10px);
                           -moz-transform: translateX(10px);
+                          transform: translateX(10px);
                         }
                   }
 
@@ -226,12 +237,13 @@ export default {
               textarea{
                   width: 100%;
                   border: none;
+                  resize: none;
                   outline: none;
-                  border-bottom: 1px solid #000000;
+                  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.6);
                   // border-radius: 5px;
-                  margin-bottom: 45px;
+                  margin-bottom: 40px;
                   background-color: transparent;
-                  padding: 12px 12px 8px;
+                  padding: 12px 12px 8px 0;
                   font-size: 14px;
 
                   &:focus{
@@ -244,6 +256,7 @@ export default {
                           font-weight: 600;
                           -webkit-transform: translateX(10px);
                           -moz-transform: translateX(10px);
+                          transform: translateX(10px);
                         }
                   }
 
@@ -263,23 +276,49 @@ export default {
               }
 
               .contact-form-buttons{
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
                 margin-top: 25px;
+
+                input[type="file"]{
+                  display: none;
+                }
+
+                label{
+                  width: 120px;
+                  display: flex;
+                  letter-spacing: 0.02rem;
+                  word-spacing: 0.2rem;
+                  font-weight: 600;
+                  justify-content: space-between;
+                  align-items: center;
+                  height: 50px;
+                  padding: 7px 0 0 0;
+                  cursor: pointer;
+                  font-size: 0.88rem;
+                  color: #000000;
+
+
+                  svg{
+                    color: #000000;
+                    width: 30px;
+                    height: 30px;
+                  }
+                }
 
                 .send-message{
                   display: flex;
                   justify-content: space-between;
                   align-items: center;
-                  width: 70%;
+                  width: 180px;
                   height: 50px;
                   background-color: transparent;
                   color: #000000;
                   font-weight: 700;
-                  letter-spacing: 0.1rem;
+                  letter-spacing: 0.02rem;
                   word-spacing: 0.2rem;
-                  font-size: 1rem;
-                  padding: 0 25px 0 25px;
+                  font-size: 0.88rem;
+                  padding: 0 20px 0 20px;
                   border: 1px solid #000000;
                   outline: none;
                   border-radius: 10px;
@@ -291,7 +330,7 @@ export default {
 
                       svg{
                       color: #ffffff;
-                      font-size: 1.1rem;
+                      font-size: 1rem;
                       }
                   }
 
@@ -350,7 +389,7 @@ export default {
         margin-top: 0px !important;
 
         .send-message{
-          width: 75% !important;
+          width: 180px !important;
         }
       }
   }
@@ -382,7 +421,7 @@ export default {
         margin-top: 0px !important;
 
         .send-message{
-          width: 80% !important;
+          width: 180px !important;
           height: 40px !important;
           font-size: 0.9rem !important;
           padding: 0 15px !important;
