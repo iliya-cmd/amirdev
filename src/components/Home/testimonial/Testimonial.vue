@@ -54,7 +54,7 @@ export default {
       },
       testimonials: [
         {
-          name: 'Angela Doe',
+          name: 'Angela Paul',
           text: 'Perfect Feed Back. every day i got reports of the progress. Loved the support.',
           rate: 5,
           img: '/images/testi-2.jpg'
