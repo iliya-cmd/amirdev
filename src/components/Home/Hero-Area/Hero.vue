@@ -115,7 +115,7 @@ export default {
             span{
                 background: linear-gradient(to right, #3ED6D3 , #9548D9 44%);
                 -webkit-background-clip: text;
-                background-clip: content-box !important;
+                background-clip: text !important;
                 -webkit-text-fill-color: transparent;
                 position: absolute;
                 top: 6px;
