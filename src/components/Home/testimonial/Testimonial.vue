@@ -68,7 +68,7 @@ export default {
         },
         {
           name: 'Tom Synnott',
-          text: 'A very well knowledge developer. I now have a super fast site without any problem even after 2 years its still perfect.',
+          text: 'A professional developer. I now have a super fast site which is still perfect even after 2 years.',
           rate: 4.5,
           img: '/images/testi-5.jpg'
         },
