@@ -164,7 +164,7 @@ export default {
                             font-size: 26px;
                             font-weight: 500;
                             margin-top: 10px;
-                            color: #ff5d73;
+                            color: #E8496D;
                             direction: rtr;
                             text-align: right;
                             margin-left: 0 !important;
@@ -192,13 +192,13 @@ export default {
                         -webkit-box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
                         -moz-box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
                         box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
-                        border: 1px solid #FF5D73;
+                        border: 1px solid #E8496D;
                         padding: 10px;
                         border-radius: 4px;
                         transition: all 0s ease;
 
                         svg{
-                            color: #FF5D73;
+                            color: #E8496D;
                             font-size: 3rem;
                             transition: all 0s ease;
                         }
@@ -207,7 +207,7 @@ export default {
                     &:hover{
                         .needs-card-image{
                             transform: rotateZ(360deg);
-                            background-color: #FF5D73;
+                            background-color: #E8496D;
                             transition: 0.5s ease;
                             svg{
                                 color: #ffffff;
@@ -230,7 +230,7 @@ export default {
                         h4{
                             font-size: 26px;
                             font-weight: 500;
-                            color: #ff5d73;
+                            color: #E8496D;
                             margin-top: 10px;
                             direction: ltr;
                             text-align: left;
@@ -259,13 +259,13 @@ export default {
                         -webkit-box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
                         -moz-box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
                         box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
-                        border: 1px solid #FF5D73;
+                        border: 1px solid #E8496D;
                         padding: 10px;
                         border-radius: 4px;
                         transition: all 0s ease;
 
                         svg{
-                            color: #FF5D73;
+                            color: #E8496D;
                             font-size: 3rem;
                             transition: all 0s ease;
 
@@ -276,7 +276,7 @@ export default {
 
                         .needs-card-image{
                             transform: rotateZ(360deg);
-                            background-color: #FF5D73;
+                            background-color: #E8496D;
                             transition: 0.5s ease;
                             svg{
                                 color: #ffffff;

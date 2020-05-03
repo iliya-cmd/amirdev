@@ -231,7 +231,7 @@ export default {
         // width: 100%;
         // background-color: #222222;
         // display: flex;
-        padding: 45px 21px 85px !important;
+        padding: 45px 31px 85px !important;
         // justify-content: space-between;
         align-items: center !important;
     }

@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <NavPlace/>
     <NavBar/>
     <Mail/>
     <scrollTop/>
@@ -14,7 +13,6 @@
 
 <script>
 import NavBar from '../components/Home/navbar/NavBar.vue'
-import NavPlace from '../components/Home/navbar/NavPlace.vue'
 import AboutOurTeam from '../components/About/AboutOurTeam'
 import Stats from '../components/About/Stats'
 import OurTopSkills from '../components/About/OurTopSkills'
@@ -25,7 +23,6 @@ import scrollTop from '../components/scrollTop/scrollTop'
 export default {
   components: {
     NavBar,
-    NavPlace,
     AboutOurTeam,
     Stats,
     OurTopSkills,

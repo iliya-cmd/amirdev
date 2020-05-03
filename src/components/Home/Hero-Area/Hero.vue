@@ -1,5 +1,5 @@
 <template>
-    <header class="w-100 hero-container">
+    <header class="hero-container" id="top" >
 
         <div class="hero-content-container fadeInLeft del-200"
         >
@@ -8,8 +8,31 @@
             apps & websites
             </h1>
             <div class="d-flex mt-2 fadeInLeft del-500"  >
-                <h2 class="hero-second-line d-flex">Expand your buisness Online</h2>
+                <h2 class="hero-second-line d-flex">The place to create professional websites</h2>
             </div>
+
+            <div class="hero-phone-buttons">
+
+                <button
+                class="phone-hero-action-button d-flex align-items-center fadeInLeft del-700" @click="showContactModal()">
+                    <p>
+                        <span>
+                            Order your website
+                        </span>
+                    </p>
+                </button>
+
+                <a  href="#our-works" v-smooth-scroll="{ duration: 1000 }"
+                class="hero-seeourwork-button d-flex align-items-center fadeInLeft del-700">
+                    <p>
+                        <span>
+                            See our works
+                        </span>
+                    </p>
+                </a>
+
+            </div>
+
             <button
             class="hero-action-button d-flex align-items-center fadeInLeft del-700" @click="showContactModal()">
                 <p>
@@ -20,7 +43,14 @@
                 </p>
             </button>
 
-            <a href="#our-works" class="see-our-work fadeInLeft del-900" v-smooth-scroll="{ duration: 1000 }">See our works</a>
+            <div class="seeourwork-div" >
+                <a href="#our-works" v-smooth-scroll="{ duration: 1000 }">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" class="fadeInLeft del-1500 svg-inline--fa fa-angle-down fa-w-10 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg>
+                </a>
+                <a href="#our-works" class="see-our-work fadeInLeft del-900" v-smooth-scroll="{ duration: 1000 }">
+                    See our works
+                </a>
+            </div>
         </div>
     </header>
 </template>
@@ -42,15 +72,17 @@ export default {
 <style lang="scss"  >
 
     .hero-container{
-        margin-top: 0 !important;
-        background-image: url(~@/assets/Hero-back.png);
-        background-position: right 56px !important;
-        background-size: 75% ;
-        width: 100%;
-        height: 700px;
-        position: relative;
-        color: #000000;
+        background: url('~@/assets/Hero-back.svg');
+        background-position: bottom right !important;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         background-repeat: no-repeat;
+        width: 100% !important;
+        height: 690px;
+        position: relative !important;
+        color: #ffffff;
     }
 
     .hero-content-container{
@@ -61,6 +93,10 @@ export default {
         flex-direction: column;
         justify-content: flex-start;
         padding-left: 50px ;
+    }
+
+    .hero-phone-buttons{
+        display: none;
     }
 
     .hero-first-line{
@@ -86,40 +122,30 @@ export default {
     .hero-action-button{
         display: flex;
         font-family: 'Helvetica', sans-serif;
+        border: none;
+        outline: none;
         position: relative;
-        border: 4px solid transparent;
         border-radius: 10px;
-        background:
-            linear-gradient(to right, white, white),
-            linear-gradient(to right, #3ED6D3 , #9548D9);
-        background-clip: padding-box, border-box;
-        background-origin: padding-box, border-box;
+        background: linear-gradient(to right, #F07A6A , #E8496D);
         font-weight: 600;
         transition: width 0.3s ease;
         width: 190px;
         height: 48px;
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 60px;
         align-items: center;
         transition: width 0.5s ease;
+        padding: 0 13.89px;
 
         p{
-            width: 100%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             margin: 0;
             padding: 0;
-            padding-right: 6px;
             text-align: center;
 
             span{
-                background: linear-gradient(to right, #3ED6D3 , #9548D9 44%);
-                -webkit-background-clip: text;
-                background-clip: text !important;
-                -webkit-text-fill-color: transparent;
-                position: absolute;
-                top: 6px;
-                left: 10px;
+                color: #ffffff;
                 font-size: 19px;
                 letter-spacing: 0.005em;
                 font-weight: 500;
@@ -129,6 +155,9 @@ export default {
 
         .icon{
             display: none;
+            position: absolute;
+            right: 15px;
+            top: 14px;
             color: #ffffff;
             width: 20px;
             height:20px;
@@ -146,8 +175,6 @@ export default {
 
         &:hover{
             color: #ffffff !important;
-            background:
-            linear-gradient(to right, #3ED6D3 , #9548D9) !important;
             width: 230px;
             border: none !important;
             padding-right: 5px;
@@ -178,41 +205,77 @@ export default {
         }
     }
 
-    .see-our-work{
-        color: #000000;
-        text-decoration: none;
+    .seeourwork-div{
         display: flex;
-        letter-spacing: 0rem !important;
-        font-size: 16px;
-        cursor: pointer;
-        font-weight: 500;
-        width: 104px !important;
         justify-content: flex-start;
-        align-items: center;
-        margin-top: 90px;
-        border-bottom: 3px solid transparent;
-        background:
-            linear-gradient(to right, white, white),
-            linear-gradient(to right, #3ED6D3 , #9548D9);
-        background-clip: padding-box, border-box;
-        background-origin: padding-box, border-box;
+        align-items: flex-end;
 
-        &:hover{
+        .see-our-work{
+            color: #ffffff;
             text-decoration: none;
-            color: #000000;
+            display: flex;
+            letter-spacing: 0.1rem !important;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 131px !important;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 48px;
+            border-bottom: 3px solid transparent;
+            background:
+                linear-gradient(to right, #1D1A5E, #1D1A5E),
+                linear-gradient(to right, #2B92E1 , #68E3F1);
+            background-clip: padding-box, border-box;
+            background-origin: padding-box, border-box;
+
+            &:hover{
+                text-decoration: none;
+                color: #ffffff;
+            }
+
+        }
+
+        a{
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+
+            &:hover{
+                text-decoration: none;
+                color: #ffffff;
+            }
+
+        }
+        .icon{
+            width: 25px;
+            height: 25px;
+            padding: 3px 2px 2px 2px;
+            margin-right: 10px;
+            border: 2px #68E3F1 solid;
+            border-radius: 50%;
+            cursor: pointer;
+
         }
     }
 
     @media (max-width: 1050px){
 
         .hero-container{
-        background-size: 80% !important;
-
+            background-position: top !important;
+            -webkit-background-size: 100%;
+            -moz-background-size: 100%;
+            -o-background-size: 100%;
+            background-size: 100%;
         }
 
         .hero-first-line{
             font-size: 2.5rem !important;
 
+        }
+
+        .hero-second-line{
+            font-size: 1.4rem !important;
         }
 
         .see-our-work{
@@ -223,24 +286,35 @@ export default {
     @media (max-width: 985px){
 
         .hero-container{
-        background-size: 90% !important;
-
+             background-position: top !important;
+            -webkit-background-size: 100%;
+            -moz-background-size: 100%;
+            -o-background-size: 100%;
+            background-size: 100%;
         }
 
         .hero-first-line{
-            font-size: 2.5rem !important;
+            font-size: 2.3rem !important;
 
         }
 
+        .hero-action-button{
+            margin-top: 45px !important;
+        }
+
         .see-our-work{
-            margin-top: 55px !important;
+            margin-top: 40px !important;
         }
     }
 
     @media (max-width: 900px){
 
         .hero-container{
-        background-size: 95% !important;
+             background-position: top !important;
+            -webkit-background-size: 100%;
+            -moz-background-size: 100%;
+            -o-background-size: 100%;
+            background-size: 100%;
 
         }
 
@@ -250,53 +324,30 @@ export default {
         }
 
         .see-our-work{
-            margin-top: 55px !important;
+            margin-top: 45px !important;
         }
     }
 
     @media (max-width: 850px){
 
         .hero-container{
-            background-size: 90% !important;
-            width: 100%;
-            height: 500px;
-            background-position: center;
-            background-size: cover;
-            position: relative;
+             background-position: top !important;
+            -webkit-background-size: 125%;
+            -moz-background-size: 125%;
+            -o-background-size: 125%;
+            background-size: 125%;
         }
 
         .see-our-work{
             margin-top: 40px !important;
         }
 
-        .hero-action-button{
-            width: 170px !important;
-            height: 45px !important;
-            margin-top: 40px !important;
-
-            span{
-                font-size: 17px !important;
-                left: 8px !important;
-                top: 6px !important;
-            }
-
-            &:hover{
-                width: 200px !important;
-
-                 span{
-                font-size: 17px !important;
-                left: 12px !important;
-                top: 10px !important;
-                }
-            }
-        }
-
         .hero-first-line{
-            font-size: 25px !important;
+            font-size: 2.5rem !important;
 
         }
         .hero-second-line{
-            font-size: 18px !important;
+            font-size: 1.3rem !important;
 
         }
     }
@@ -304,230 +355,343 @@ export default {
     @media (max-width: 750px){
 
         .hero-container{
-            background-size: 95% !important;
-            width: 100%;
-            height: 500px;
-            background-position: center;
-            background-size: cover;
-            position: relative;
+             background-position: top !important;
+            -webkit-background-size: 135%;
+            -moz-background-size: 135%;
+            -o-background-size: 135%;
+            background-size: 135%;
         }
 
         .see-our-work{
             margin-top: 40px !important;
         }
 
-        .hero-action-button{
-            width: 170px !important;
-            height: 45px !important;
-            margin-top: 40px !important;
-
-            span{
-                font-size: 17px !important;
-                left: 8px !important;
-                top: 6px !important;
-            }
-
-            &:hover{
-                width: 200px !important;
-
-                 span{
-                font-size: 17px !important;
-                left: 12px !important;
-                top: 10px !important;
-                }
-            }
-        }
-
-        .hero-first-line{
-            font-size: 25px !important;
-
-        }
-        .hero-second-line{
-            font-size: 18px !important;
-
-        }
     }
 
     @media (max-width: 720px){
 
         .hero-container{
-            background-size: 100% !important;
-            width: 100%;
-            height: 500px;
-            background-position: center;
-            background-size: cover;
-            position: relative;
+            background-position: top !important;
+            -webkit-background-size: 140%;
+            -moz-background-size: 140%;
+            -o-background-size: 140%;
+            background-size: 140%;
         }
 
         .see-our-work{
             margin-top: 40px !important;
         }
 
-        .hero-action-button{
-            width: 170px !important;
-            height: 45px !important;
-            margin-top: 40px !important;
+    }
 
-            span{
-                font-size: 17px !important;
-                left: 8px !important;
-                top: 6px !important;
+    @media (max-width: 650px){
+
+        .hero-container{
+            background-image: url(~@/assets/Phone-hero-back.svg);
+            background-size: 101% !important;
+            background-position: top !important;
+            height: 920px !important;
+
+        }
+
+        .hero-content-container{
+            width: 100% !important;
+            padding: 0 31px !important;
+            align-items: center !important;
+
+            .hero-first-line{
+                font-size: 3rem !important;
+                font-weight: 600 !important;
+                width: 100% !important;
+                margin-top: 70%;
+                text-align: center !important;
+                justify-content: center !important;
             }
 
-            &:hover{
-                width: 200px !important;
+            .hero-second-line{
+                font-size: 1.5rem !important;
+                font-weight: 300 !important;
+                width: 100% !important;
+                text-align: center !important;
+                justify-content: center !important;
+            }
 
-                 span{
-                font-size: 17px !important;
-                left: 12px !important;
-                top: 10px !important;
+            .seeourwork-div{
+                display: none ;
+            }
+
+            >button.hero-action-button{
+                display: none !important;
+            }
+
+            .hero-phone-buttons{
+                width: 100% !important;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between;
+                align-content: center;
+
+                >button.phone-hero-action-button{
+                    display: flex;
+                    color: #ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    border: none;
+                    outline: none;
+                    position: relative;
+                    border-radius: 5px;
+                    background: linear-gradient(to right, #F07A6A , #E8496D);
+                    font-weight: 600;
+                    font-size: 19px;
+                    justify-content: center;
+                    margin-top: 45px;
+                    align-items: center;
+                    transition: width 0.5s ease;
+                    height: 60px;
+                    width: 45% !important;
+
+                    p{
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+
+                a.hero-seeourwork-button{
+                    color: #ffffff;
+                    display: flex !important;
+                    border-radius: 5px !important;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 19px;
+                    border: none;
+                    outline: none;
+                    position: relative;
+                    background: linear-gradient(to right, #2B92E1 , #68E3F1);
+                    font-weight: 600;
+                    transition: width 0.3s ease;
+                    width: 190px;
+                    height: 60px;
+                    justify-content: center;
+                    margin-top: 45px;
+                    align-items: center !important;
+                    width: 45% !important;
+
+                    p{
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    &:hover{
+                        text-decoration: none;
+                    }
                 }
             }
         }
 
-        .hero-first-line{
-            font-size: 25px !important;
+    }
+
+    @media (max-width: 500px){
+        .hero-container{
+            background-image: url(~@/assets/Phone-hero-back.svg);
+            background-size: 110% !important;
+            background-position: top !important;
+            height: 1000px !important;
 
         }
-        .hero-second-line{
-            font-size: 18px !important;
+
+        .phone-hero-action-button{
+            font-size: 17px !important;
+            height: 50px !important;
+
+        }
+
+        a.hero-seeourwork-button{
+            font-size: 17px !important;
+            height: 50px !important;
 
         }
     }
 
-    @media (max-width: 630px){
-
+    @media (max-width: 455px){
         .hero-container{
-            background-image: url(~@/assets/Hero-back.png);
-            background-attachment: inherit;
-            width: 100%;
-            height: 400px;
-            background-position: center;
-            background-size: cover;
-            position: relative;
-        }
-
-        .see-our-work{
-            margin-top: 40px !important;
-        }
-
-        .hero-action-button{
-            width: 150px !important;
-            height: 45px !important;
-            margin-top: 40px !important;
-            border-width: 3px !important;
-
-            span{
-                font-size: 15px !important;
-                left: 8px !important;
-                top: 9px !important;
-            }
-
-            &:hover{
-                width: 200px !important;
-
-                 span{
-                    font-size: 15px !important;
-                    left: 12px !important;
-                    top: 12px !important;
-                }
-            }
-        }
-
-        div.hero-content-container{
-            top: 130px !important;
-            padding-left: 20px ;
-
-            >div{
-                flex-direction: column;
-                align-items: flex-start;
-
-                h3{
-                    margin-left: 0 !important;
-                }
-            }
-        }
-
-        .hero-first-line{
-            font-size: 23px !important;
+            background-image: url(~@/assets/Phone-hero-back.svg);
+            background-size: 120% !important;
+            background-position: top !important;
+            height: 700px !important;
 
         }
-        .hero-second-line{
+
+        .phone-hero-action-button{
             font-size: 15px !important;
+            height: 50px !important;
+
+        }
+
+        .hero-content-container{
+
+            .hero-first-line{
+                font-size: 2.5rem !important;
+            }
+
+            .hero-second-line{
+                font-size: 1.4  rem !important;
+            }
+        }
+
+        a.hero-seeourwork-button{
+            font-size: 15px !important;
+            height: 50px !important;
 
         }
     }
 
-    @media (max-width: 480px){
-
+    @media (max-width: 392px){
         .hero-container{
-            background-image: url(~@/assets/Hero-back.png);
-            width: 100%;
-            height: 300px;
-            background-position: center;
-            background-size: cover;
-            position: relative;
-        }
-
-        .see-our-work{
-            margin-top: 20px !important;
-            font-size: 9px !important;
-            border-width: 2px !important;
-            width: 71px !important;
-        }
-
-        .hero-action-button{
-            width: 100px !important;
-            height: 25px !important;
-            margin-top: 10px !important;
-            border-width: 2px !important;
-
-            span{
-                font-size: 10px !important;
-                left: 5px !important;
-                top: 3px !important;
-            }
-
-            .icon{
-                width: 11px !important;
-                height: 11px !important;
-            }
-
-            &:hover{
-                width: 120px !important;
-
-                 span{
-                    font-size: 10px !important;
-                    left: 7px !important;
-                    top: 5px !important;
-                }
-            }
-        }
-
-        div.hero-content-container{
-            top: 98px !important;
-            padding-left: 20px ;
-
-
-            >div{
-                flex-direction: column;
-                align-items: flex-start;
-
-                h3{
-                    margin-left: 0 !important;
-                }
-            }
-        }
-
-        .hero-first-line{
-            font-size: 18px !important;
+            background-image: url(~@/assets/Phone-hero-back.svg);
+            background-size: 120% !important;
+            background-position: top !important;
+            height: 800px !important;
 
         }
-        .hero-second-line{
+
+        .phone-hero-action-button{
             font-size: 13px !important;
-            width: 80% !important;
-            text-align: left;
+            height: 40px !important;
+
         }
 
+        .hero-content-container{
+
+            .hero-first-line{
+                font-size: 2.5rem !important;
+            }
+
+            .hero-second-line{
+                font-size: 1.4  rem !important;
+            }
+        }
+
+        a.hero-seeourwork-button{
+            font-size: 13px !important;
+            height: 40px !important;
+
+        }
+    }
+
+    @media (max-width: 380px){
+        .hero-container{
+            background-image: url(~@/assets/Phone-hero-back.svg);
+            background-size: 110% !important;
+            background-position: top !important;
+            height: 700px !important;
+
+        }
+
+        .hero-phone-buttons{
+
+        }
+
+        .phone-hero-action-button{
+            font-size: 13px !important;
+            height: 40px !important;
+            margin-top: 35px !important;
+
+        }
+
+        .hero-content-container{
+
+            .hero-first-line{
+                font-size: 2.3rem !important;
+                margin-top: 200px !important;
+            }
+
+            .hero-second-line{
+                font-size: 1.4  rem !important;
+            }
+        }
+
+        a.hero-seeourwork-button{
+            font-size: 13px !important;
+            height: 40px !important;
+            margin-top: 35px !important;
+
+        }
+    }
+
+    @media (max-width: 368px){
+        .hero-container{
+            background-image: url(~@/assets/Phone-hero-back.svg);
+            background-size: 140% !important;
+            background-position: top !important;
+            height: 670px !important;
+
+        }
+
+        .hero-phone-buttons{
+
+        }
+
+        .phone-hero-action-button{
+            font-size: 11px !important;
+            height: 40px !important;
+            margin-top: 35px !important;
+
+        }
+
+        .hero-content-container{
+
+            .hero-first-line{
+                font-size: 2.3rem !important;
+                margin-top: 200px !important;
+            }
+
+            .hero-second-line{
+                font-size: 1.4rem !important;
+            }
+        }
+
+        a.hero-seeourwork-button{
+            font-size: 11px !important;
+            height: 40px !important;
+            margin-top: 35px !important;
+
+        }
+    }
+    @media (max-width: 340px){
+        .hero-container{
+            background-image: url(~@/assets/Phone-hero-back.svg);
+            background-size: 140% !important;
+            background-position: top !important;
+            height: 750px !important;
+
+        }
+
+        .hero-phone-buttons{
+
+        }
+
+        .phone-hero-action-button{
+            font-size: 11px !important;
+            height: 40px !important;
+            margin-top: 35px !important;
+
+        }
+
+        .hero-content-container{
+
+            .hero-first-line{
+                font-size: 2.3rem !important;
+                margin-top: 200px !important;
+            }
+
+            .hero-second-line{
+                font-size: 1.4rem !important;
+            }
+        }
+
+        a.hero-seeourwork-button{
+            font-size: 11px !important;
+            height: 40px !important;
+            margin-top: 35px !important;
+
+        }
     }
 </style>

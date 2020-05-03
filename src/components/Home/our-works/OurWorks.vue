@@ -168,7 +168,7 @@ export default {
             margin-bottom: 0;
 
             span{
-                color: #FF5D73;
+                color: #E8496D;
             }
         }
 

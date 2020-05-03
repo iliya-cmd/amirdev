@@ -73,30 +73,30 @@ export default {
   data () {
     return {
       items1: [
-        { text: 'More Speed', color: '#235F9B', delay: 900 },
-        { text: 'Better SEO', color: '#235F9B', delay: 1000 },
-        { text: 'Highly Secure', color: '#235F9B', delay: 1100 }
+        { text: 'More Speed', color: '#055FDC', delay: 900 },
+        { text: 'Better SEO', color: '#055FDC', delay: 1000 },
+        { text: 'Highly Secure', color: '#055FDC', delay: 1100 }
       ],
       items2: [
-        { text: 'Responsive', color: '#235F9B', delay: 1200 },
-        { text: 'Easily Maintainable', color: '#235F9B', delay: 1300 },
-        { text: 'Strong Databse', color: '#235F9B', delay: 1400 }
+        { text: 'Responsive', color: '#055FDC', delay: 1200 },
+        { text: 'Easily Maintainable', color: '#055FDC', delay: 1300 },
+        { text: 'Strong Databse', color: '#055FDC', delay: 1400 }
       ],
-      circleColor: '#235F9B'
+      circleColor: '#055FDC'
     }
   },
   methods: {
     changeCircle1: function (index) {
-      this.items1[index].color = '#ff5d73'
+      this.items1[index].color = '#E8496D'
     },
     changeCircleBack1: function (index) {
-      this.items1[index].color = '#235F9B'
+      this.items1[index].color = '#055FDC'
     },
     changeCircle2: function (index) {
-      this.items2[index].color = '#ff5d73'
+      this.items2[index].color = '#E8496D'
     },
     changeCircleBack2: function (index) {
-      this.items2[index].color = '#235F9B'
+      this.items2[index].color = '#055FDC'
     }
   }
 }
@@ -134,7 +134,7 @@ export default {
                         cursor: default;
 
                         span{
-                            color: #ff5d73;
+                            color: #E8496D;
                         }
                     }
 
@@ -248,26 +248,8 @@ export default {
         }
     }
 
-//     .dotted {
-//         width: 95%;
-//         height: 98%;
-//         background: hsla(339, 0%, 99%, 0.1);
-//         background-image: radial-gradient(hsla(339, 100%, 47%, 1.00) 5%, transparent 0);
-//         background-size: 30px 22px;
-//         position: relative;
-//         right: -10%;
-//         top: -85%;
-//         z-index: -1;
-//         overflow-x: hidden;
-//  }
-// .sec1 .top-space {margin-top:30px; padding-top: 45px;}
-// .sec1 .dott2 {left: -5%; height: 90%; top: -77%; margin-bottom: 20px;}
-// .sec1 .custom-ul {list-style-type: none; padding-left:0; }
-// .sec1 .custom-fa { color: #225e9b; margin:5px; vertical-align: middle;}
-// .sec1 td {width: 300px;}
-
 .check-circle svg{
-    color: #225E9B !important;
+    color: #055FDC !important;
 }
 
 @media (max-width: 950px){

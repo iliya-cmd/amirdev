@@ -153,7 +153,7 @@ export default {
                     border-radius: 100px;
                     padding: 20px;
                     height: 86px;
-                    background-color: #235F9B;
+                    background-color: #055FDC;
 
                 }
             }
@@ -167,7 +167,7 @@ export default {
 
                 .number{
                     font-family: 'Roboto', sans-serif !important ;
-                    color: #FF5D73;
+                    color: #E8496D;
                     font-size: 4.5rem;
                     font-weight: 200 !important;
                 }

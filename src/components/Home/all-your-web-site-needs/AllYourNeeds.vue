@@ -95,7 +95,7 @@ export default {
                     margin-right: 4px;
                     font-size: 40px;
                     font-weight: bold;
-                    color: #ff5d73 !important;
+                    color: #E8496D !important;
                 }
             }
 

@@ -93,7 +93,7 @@ export default {
         margin-top: 0px;
         padding-top: 48px;
 
-        color: #ff5d73;
+        color: #E8496D;
         font-size: 2.5rem;
         font-weight: 700;
         margin-left: 14px;
@@ -162,7 +162,7 @@ export default {
     }
 
     .all-cards-container-div{
-      padding: 0 21px !important;
+      padding: 0 31px !important;
     }
 
     .top-heading{
@@ -181,7 +181,7 @@ export default {
     }
 
     .all-cards-container-div{
-      padding: 0 21px !important;
+      padding: 0 31px !important;
     }
 
     .top-heading{

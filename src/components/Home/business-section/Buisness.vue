@@ -104,7 +104,7 @@ export default {
     }
 
     .pinked-growing{
-        color: #ff5d73 !important;
+        color: #E8496D !important;
         margin-right: 10px;
         font-weight: bold;
     }
@@ -121,7 +121,7 @@ export default {
         border: none;
         outline: none;
         border-radius: 10px;
-        background-color: #ff5d73;
+        background-color: #E8496D;
         color: #ffffff !important;
         font-size: 18px;
         font-weight: 700;
@@ -139,7 +139,7 @@ export default {
         }
 
         &:hover{
-            background-color: #225E9B;
+            background-color: #055FDC;
 
         }
     }
@@ -242,7 +242,7 @@ export default {
         .content{
 
             justify-content: center !important;
-            padding-left: 21px !important;
+            padding-left: 31px !important;
             text-align: center !important;
             margin-bottom: 0 !important;
         }
@@ -289,7 +289,7 @@ export default {
 
             flex-wrap: wrap;
             width: 100% !important;
-            padding: 90px 21px 0px !important;
+            padding: 90px 31px 0px !important;
             margin-top: 0px !important;
             padding-top: 0px;
             justify-content: flex-start !important;

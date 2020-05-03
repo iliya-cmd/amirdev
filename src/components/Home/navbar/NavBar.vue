@@ -1,8 +1,7 @@
 /* eslint-disable no-trailing-spaces */
 <template>
 <div class="container-fluid">
-    <nav class="navbar navbar-dark ">
-      <div class="blur-back"></div>
+    <nav class="navbar " :class="{ 'blur': bluredBg }">
       <!-- Brand -->
       <div class="d-flex justify-content-center align-items-center nav-logo">
         <router-link class="navbar-brand" to="/" :exact="true">
@@ -56,11 +55,22 @@ export default {
         { name: 'Services', link: '/services', active: this.isPageActive('Services') },
         { name: 'Contact', link: '/contact', active: this.isPageActive('Contact') }
       ],
-      hambNav: false
+      hambNav: false,
+      bluredBg: true
     }
   },
   created () {
     console.log(this.$router.history.current.name)
+
+    if( this.$router.history.current.name == "Home"){
+      this.bluredBg = false
+      window.addEventListener('scroll', (e) => {
+        if( window.pageYOffset > 600) this.bluredBg = true
+        if( window.pageYOffset < 600) this.bluredBg = false
+
+      });
+
+    }
   },
   methods: {
     toggleNav: function () {
@@ -80,15 +90,9 @@ $spacer : 10px;
     padding-right: 0px;
   }
 
-  .blur-back{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color: #222222, $alpha: 0.5) ;
-    filter: blur(2px);
-    z-index: 20;
+  .blur{
+    background-color: rgba($color: #222222, $alpha: 0.5) !important;
+    height: 60px !important;
   }
 
   .hamb-nav-links-div{
@@ -96,9 +100,11 @@ $spacer : 10px;
     width: 200px;
     display: none;
     right: 0;
-    top: 0;
-    padding-top: 60px ;
-    background-color: rgba($color: #171717, $alpha: 0.97);
+    top: 0px;
+    padding-top: 80px ;
+    background-color: rgba($color: #fcfcfc, $alpha: 1);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 10px;
     height: 1000px;
     z-index: 90 !important;
   }
@@ -134,9 +140,9 @@ $spacer : 10px;
     .burger-icon{
       background-color: #ffffff;
       display: block;
-      width: 33px;
+      width: 45px;
       height: 4px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       position: relative;
       border-radius: 3px;
       z-index: 4;
@@ -151,10 +157,11 @@ $spacer : 10px;
 
   .hamb-nav-active{
 
-    transform: translateX(-120px);
+    transform: translateX(-110px);
     transition: 0.3s;
     span:nth-of-type(1){
-    transform: rotateZ(45deg) translateY(13px);
+    transform: rotateZ(45deg) translateY(23px) translateX(10px);
+    background-color: #000000 !important;
     outline: none;
 
     }
@@ -164,7 +171,8 @@ $spacer : 10px;
     }
 
     span:nth-of-type(3){
-        transform: rotateZ(-45deg) translateY(-13px);
+        background-color: #000000 !important;
+        transform: rotateZ(-45deg) translateY(-8px) translateX(-3px);
 
     }
   }
@@ -184,20 +192,10 @@ $spacer : 10px;
   }
 
   .active-nav-link{
-    color: #ffffff !important;
-    background-color: #ffffff;
-    color: #000000 !important;
+    color: #68E3F1 !important;
     border-radius: 10px !important;
+    border: 2px solid #68E3F1;
 
-    &:hover{
-        color: #000000 !important;
-
-      .nav-main-link{
-
-        color: #000000 !important;
-
-      }
-    }
   }
 
   .nav-main-link{
@@ -219,23 +217,20 @@ $spacer : 10px;
 
   .nav-main-link:hover{
 
-    background-color: #ffffff;
-    color: #000000 ;
-    border-radius: 10px;
+    color: #68E3F1 ;
     z-index: 5000;
 
   }
 
   .navbar{
-    background-color: rgba($color: #222222, $alpha: 0.6) ;
-    // filter: blur(5px);
-    height: 55px;
+    position: fixed;
+    height: 95px;
+    background-color: transparent;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     display: flex !important;
     align-items: center !important;
-    position: fixed;
-    top: 0 !important;
+    top: 0px !important;
     width: 100%;
     z-index: 1000;
 
@@ -264,19 +259,32 @@ $spacer : 10px;
   @media (max-width: 650px) {
     .hamburger-toggler{
       display: block;
+      margin-right:9px !important;
 
     }
 
     .nav-links-div{
       display: none !important;
 
-
-
     }
 
+    .navbar{
+      top: 25px !important;
+      position: fixed !important;
+      top: 0px !important;
+      height: 55px !important;
+      left: 0 !important;
+    }
     .nav-logo{
       padding-left: 0 !important;
-      margin-left: 5px !important;
+      margin-left:15px !important;
+    }
+
+    .active-nav-link{
+    color: #000000 !important;
+    border-radius: 10px !important;
+    border: none !important;
+
     }
 
     .hamb-nav-links-row{
@@ -290,16 +298,17 @@ $spacer : 10px;
       padding-bottom: 10px !important;
 
         .router-link-active{
-            background-color: rgba($color: #ffffff, $alpha: 0.9) !important;
+            // background-color: rgba($color: #ffffff, $alpha: 0.9) !important;
         }
       .nav-main-link{
         width: 100% !important;
         height: 50px !important;
         padding-left: 20px !important;
         border-radius: 0 !important;
+        color: #000000 !important;
 
         &:hover{
-
+          color: #ffffff !important;
         }
 
 

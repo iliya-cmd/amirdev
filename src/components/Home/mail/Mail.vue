@@ -47,7 +47,7 @@ export default {
 
         &:hover{
             // transition: width 1s;
-            background-color: #FF5D73;
+            background-color: #E8496D;
             transform: scale(1.1) !important;
 
           .icon{

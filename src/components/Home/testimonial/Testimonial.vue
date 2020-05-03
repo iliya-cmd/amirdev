@@ -122,7 +122,7 @@ export default {
             cursor: default;
 
             .love-us{
-              border-bottom: 3px solid #ff5d73;
+              border-bottom: 3px solid #E8496D;
               font-style: normal;
             }
           }

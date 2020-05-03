@@ -33,11 +33,11 @@ export default {
   data () {
     return {
       skills: [
-        { skill: 'Vue Js', width: 90, delay: '500' },
-        { skill: 'SASS / CSS', width: 85, delay: '600' },
-        { skill: 'Fire Base', width: 70, delay: '700' },
-        { skill: 'Laravel / PHP', width: 95, delay: '800' },
-        { skill: 'Design', width: 78, delay: '900' }
+        { skill: 'Vue Js', width: 90, delay: '300' },
+        { skill: 'SASS / CSS', width: 85, delay: '400' },
+        { skill: 'Fire Base', width: 70, delay: '500' },
+        { skill: 'Laravel / PHP', width: 95, delay: '600' },
+        { skill: 'Design', width: 78, delay: '700' }
       ]
     }
   }
@@ -63,7 +63,7 @@ export default {
                 margin-bottom: 10px;
 
                 span{
-                    color: #f674a4;
+                    color: #E8496D;
                     margin-left: 5px;
                     font-size: 2.5rem;
                     font-weight: 700;
@@ -120,7 +120,7 @@ export default {
                         animation-duration: 4s;
                         height: 2px;
                         display: flex;
-                        background-color: #f674a4;
+                        background-color: #E8496D;
                         background-image: -webkit-gradient(linear, left top, left bottom, from(#f674a4), to(#e06995));
                         background-image: -webkit-linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(121,9,109,1) 65%, rgba(0,111,138,1) 100%);
                         background-image: -moz-linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(121,9,109,1) 65%, rgba(0,111,138,1) 100%);

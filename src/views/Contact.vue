@@ -1,6 +1,5 @@
 <template>
     <div  class="contact-container">
-      <NavPlace/>
       <NavBar/>
         <div class="contact-content-container">
           <Contact/>
@@ -13,13 +12,11 @@
 
 <script>
 import NavBar from '../components/Home/navbar/NavBar.vue'
-import NavPlace from '../components/Home/navbar/NavPlace.vue'
 import Footer from '../components/Home/footer/Footer.vue'
 import Contact from '../components/Contact/Contact.vue'
 export default {
   components: {
     NavBar,
-    NavPlace,
     Footer,
     Contact
   },

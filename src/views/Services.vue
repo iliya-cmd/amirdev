@@ -1,6 +1,5 @@
 <template>
   <div class="services">
-    <NavPlace />
     <NavBar style="margin-top:0" />
     <Mail/>
     <scrollTop/>
@@ -16,7 +15,6 @@
 <script>
 // @ is an alias to /src
 import NavBar from '../components/Home/navbar/NavBar.vue'
-import NavPlace from '../components/Home/navbar/NavPlace.vue'
 import howItWorks from '../components/Services/how-it-works/howItWorks'
 import Testimonial from '../components/Home/testimonial/Testimonial'
 import Footer from '../components/Home/footer/Footer'
@@ -30,7 +28,6 @@ export default {
   name: 'Home',
   components: {
     NavBar,
-    NavPlace,
     howItWorks,
     Testimonial,
     Footer,

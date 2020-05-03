@@ -54,7 +54,7 @@ export default {
   created () {
 
     Event.$on('click-happened', e =>{
-        if( this.show == 'block' && e.target.closest('.contact-modal') != this.$refs.modalContact && !e.target.closest('.mail-icon-container') && !e.target.closest('.hero-action-button') && !e.target.closest('.bulid-your-buisness')) {
+        if( this.show == 'block' && e.target.closest('.contact-modal') != this.$refs.modalContact && !e.target.closest('.mail-icon-container') && !e.target.closest('.hero-action-button') && !e.target.closest('.phone-hero-action-button') && !e.target.closest('.bulid-your-buisness')) {
             this.closeModal();
         }
     })
