@@ -395,19 +395,19 @@ export default {
 
         }
 
-        .hero-content-container{
-            width: 100% !important;
-            padding: 0 31px !important;
-            align-items: center !important;
-
-            .hero-first-line{
+        .hero-first-line{
                 font-size: 2.7rem !important;
                 font-weight: 600 !important;
                 width: 100% !important;
                 margin-top: 30%;
                 text-align: center !important;
                 justify-content: center !important;
-            }
+        }
+        .hero-content-container{
+            width: 100% !important;
+            padding: 0 31px !important;
+            align-items: center !important;
+
 
             .hero-second-line{
                 font-size: 1.4rem !important;
@@ -492,7 +492,7 @@ export default {
     @media (max-width: 500px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 65%, 100% !important;
+            background-size: 75%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             background-position: top !important;
@@ -521,7 +521,7 @@ export default {
     @media (max-width: 455px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 60%, 100% !important;
+            background-size: 95%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             height: 100vh !important;
@@ -529,26 +529,26 @@ export default {
         }
 
         .hero-first-line{
-                font-size: 2rem !important;
-                margin-top: 25%  !important;
+                font-size: 26px !important;
+                margin-top: 50%  !important;
         }
 
         .phone-hero-action-button{
-            font-size: 15px !important;
-            height: 50px !important;
+            font-size: 12px !important;
+            height: 45px !important;
 
         }
 
         .hero-content-container{
 
             .hero-second-line{
-                font-size: 1.4  rem !important;
+                font-size: 13px !important;
             }
         }
 
         a.hero-seeourwork-button{
-            font-size: 15px !important;
-            height: 50px !important;
+            font-size: 12px !important;
+            height: 45px !important;
 
         }
     }
@@ -591,7 +591,7 @@ export default {
     @media (max-width: 380px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 80%, 100% !important;
+            background-size: 100%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             height: 100vh !important;
@@ -602,27 +602,29 @@ export default {
 
         }
 
-        .phone-hero-action-button{
-            font-size: 13px !important;
-            height: 40px !important;
-            margin-top: 35px !important;
 
-        }
 
         .hero-content-container{
 
+            .phone-hero-action-button{
+            font-size: 11px !important;
+            height: 40px !important;
+            margin-top: 35px !important;
+
+            }
+
             .hero-first-line{
-                font-size: 2.2rem !important;
-                margin-top: 35%  !important;
+                font-size: 2rem !important;
+                margin-top: 50%  !important;
             }
 
             .hero-second-line{
-                font-size: 1.4  rem !important;
+                font-size: 0.9rem !important;
             }
         }
 
         a.hero-seeourwork-button{
-            font-size: 13px !important;
+            font-size: 11px !important;
             height: 40px !important;
             margin-top: 35px !important;
 
@@ -672,7 +674,7 @@ export default {
     @media (max-width: 340px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 80%, 110% !important;
+            background-size: 90%, 110% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             height: 570px !important;
@@ -693,12 +695,12 @@ export default {
         .hero-content-container{
 
             .hero-first-line{
-                font-size: 2.3rem !important;
-                margin-top: 25% !important;
+                font-size: 1.8rem !important;
+                margin-top: 37% !important;
             }
 
             .hero-second-line{
-                font-size: 1.4rem !important;
+                font-size: 0.9rem !important;
             }
         }
 

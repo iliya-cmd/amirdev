@@ -65,8 +65,8 @@ export default {
     if( this.$router.history.current.name == "Home"){
       this.bluredBg = false
       window.addEventListener('scroll', (e) => {
-        if( window.pageYOffset > 600) this.bluredBg = true
-        if( window.pageYOffset < 600) this.bluredBg = false
+        if( window.pageYOffset > 500) this.bluredBg = true
+        if( window.pageYOffset < 500) this.bluredBg = false
 
       });
 
@@ -140,17 +140,20 @@ $spacer : 10px;
     .burger-icon{
       background-color: #ffffff;
       display: block;
-      width: 45px;
-      height: 4px;
-      margin-bottom: 10px;
+      width: 35px;
+      height: 4px !important;
+      margin-bottom: 8px;
       position: relative;
-      border-radius: 3px;
+      border-radius: 5px;
       z-index: 4;
       outline:none;
 
       &:nth-child(3){
         margin-bottom: 0px !important;
 
+      }
+      &:nth-child(2){
+              height: 4px !important;
       }
     }
   }
@@ -172,7 +175,7 @@ $spacer : 10px;
 
     span:nth-of-type(3){
         background-color: #000000 !important;
-        transform: rotateZ(-45deg) translateY(-8px) translateX(-3px);
+        transform: rotateZ(-45deg) translateY(-8px) translateX(-7px);
 
     }
   }
