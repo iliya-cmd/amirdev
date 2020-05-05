@@ -114,7 +114,7 @@ export default {
 #app {
   font-family: 'Helvetica', sans-serif;
   text-align: center;
-  height: 100%;
+  // height: 100%;
   color: #ffffff;
   letter-spacing: 0.05rem;
 }
@@ -131,7 +131,7 @@ export default {
 
 html{
   overflow-x: hidden !important;
-  height: 100%;
+  // height: 100%;
   width: 100%;
 
 }

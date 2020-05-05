@@ -29,7 +29,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 new Vue({
   created () {
     AOS.init({
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      disable: 'phone', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       animatedClassName: 'aos-animate', // class applied on animation
       useClassNames: true, // if true, will add content of `data-aos` as classes on scroll
       initClassNames: false,
