@@ -33,13 +33,13 @@ export default {
 
 </script>
 
-<style lang='scss'>
-
+<style lang='scss' >
 
   .contact-container{
     font-family: 'Helvetica', sans-serif !important;
     height: auto !important;
     overflow: auto !important;
+    // min-height: 100vh !important;
     width: 100%;
     z-index: -5;
     background-image: url(~@/assets/contact-map.jpg);
@@ -63,18 +63,47 @@ export default {
 
       }
 
+
       >div{
         height: 500px;
       }
 
     }
+
+
   }
 
+  @media (max-width: 1165px){
+    .contact-container{
+      font-family: 'Helvetica', sans-serif !important;
+        height: 100% !important;
+
+      background-image: url(~@/assets/contact-map.jpg);
+      background-size: cover !important;
+      background-position: top;
+      background-repeat: no-repeat !important;
+      background-color: #222222;
+    }
+    .contact-footer{
+        width: 100%;
+        background-color: #222222;
+        // padding-top: 80px;
+        position: absolute;
+        bottom: 0;
+    }
+  }
   @media (max-width: 700px ){
+    .contact-footer{
+        width: 100%;
+        background-color: #222222;
+        // padding-top: 80px;
+        position: relative;
+        z-index: 0;
+    }
     .contact-container{
       background-attachment: inherit !important;
       .contact-content-container{
-        height: 600px !important;
+        // height: 600px !important;
         padding-top: 70px;
         // margin-bottom: 50px !important;
 
@@ -92,6 +121,7 @@ export default {
 
         .contact-right-section{
           width: 100% !important;
+          z-index: 4;
         }
         >div{
           flex-direction: column !important;
@@ -140,6 +170,20 @@ export default {
 
         .contact-right-section{
           width: 100% !important;
+
+          .contact-form-buttons{
+
+            button{
+              font-size: 0.7rem !important;
+              width: 49% !important;
+              padding: 3px 10px !important;
+
+            }
+
+            label{
+              font-size: 0.8rem !important;
+            }
+          }
         }
         >div{
           flex-direction: column !important;
@@ -198,11 +242,28 @@ export default {
             width: 100%;
 
             .contact-form-buttons{
-              justify-content: center;
+
+            button{
+              font-size: 0.7rem !important;
+              // width: 49% !important;
+              padding: 3px 10px !important;
+
+            }
+
+            label{
+              font-size: 0.8rem !important;
+            }
+          }
+            .contact-form-buttons{
+              justify-content: space-between;
 
               .send-message{
                 margin: 0 !important;
-                margin-right: 15px !important;
+                margin-right: 0px !important;
+                font-size: 0.7rem !important;
+                // width: 49% !important;
+                padding: 3px 10px !important;
+
               }
             }
           }
@@ -224,4 +285,38 @@ export default {
       }
     }
   }
+
+  @media (max-width: 500px ){
+
+    .contact-container{
+
+      .contact-content-container{
+
+        .contact-right-section{
+          form{
+            height: 400px !important;
+            textarea{
+              margin-bottom: 10px !important;
+            }
+            .contact-form-buttons{
+                      flex-direction: column;
+                      padding-top: 0px !important;
+                      justify-content: space-between;
+                    .send-message{
+                        font-size: 0.7rem !important;
+                        width: 60% !important;
+                        padding: 3px 15px !important;
+
+                    }
+                      label{
+                        font-size: 0.8rem !important;
+
+                      }
+              }
+          }
+        }
+      }
+    }
+  }
+
 </style>

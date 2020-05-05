@@ -38,4 +38,7 @@ export default {
   .about{
     width: 100%;
   }
+  body{
+    background-color: #ffffff !important;
+  }
 </style>

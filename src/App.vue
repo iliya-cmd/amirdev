@@ -114,6 +114,7 @@ export default {
 #app {
   font-family: 'Helvetica', sans-serif;
   text-align: center;
+  height: 100%;
   color: #ffffff;
   letter-spacing: 0.05rem;
 }
@@ -128,13 +129,16 @@ export default {
 
 }
 
-html, body{
+html{
   overflow-x: hidden !important;
+  height: 100%;
   width: 100%;
 
 }
 body{
   width: 100%;
+  height: 100%;
+  overflow-x: hidden !important;
   position: relative !important;
   font-family: 'Helvetica', 'Roboto';
   text-align: center;

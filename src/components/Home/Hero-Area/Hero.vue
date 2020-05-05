@@ -387,10 +387,11 @@ export default {
     @media (max-width: 650px){
 
         .hero-container{
-            background-image: url(~@/assets/Phone-hero-back.svg);
-            background-size: 101% !important;
+            background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
+            background-size: 60%, 100% !important;
             background-position: top !important;
-            height: 920px !important;
+            background-repeat: no-repeat;
+            height: 700px !important;
 
         }
 
@@ -400,16 +401,16 @@ export default {
             align-items: center !important;
 
             .hero-first-line{
-                font-size: 3rem !important;
+                font-size: 2.7rem !important;
                 font-weight: 600 !important;
                 width: 100% !important;
-                margin-top: 70%;
+                margin-top: 30%;
                 text-align: center !important;
                 justify-content: center !important;
             }
 
             .hero-second-line{
-                font-size: 1.5rem !important;
+                font-size: 1.4rem !important;
                 font-weight: 300 !important;
                 width: 100% !important;
                 text-align: center !important;
@@ -490,11 +491,18 @@ export default {
 
     @media (max-width: 500px){
         .hero-container{
-            background-image: url(~@/assets/Phone-hero-back.svg);
-            background-size: 110% !important;
+            background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
+            background-size: 65%, 100% !important;
             background-position: top !important;
-            height: 1000px !important;
+            background-repeat: no-repeat;
+            background-position: top !important;
+            height: 600px !important;
 
+        }
+
+        .hero-first-line{
+                font-size: 2.5rem !important;
+                margin-top: 27%  !important;
         }
 
         .phone-hero-action-button{
@@ -512,11 +520,17 @@ export default {
 
     @media (max-width: 455px){
         .hero-container{
-            background-image: url(~@/assets/Phone-hero-back.svg);
-            background-size: 120% !important;
+            background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
+            background-size: 60%, 100% !important;
             background-position: top !important;
-            height: 700px !important;
+            background-repeat: no-repeat;
+            height: 600px !important;
 
+        }
+
+        .hero-first-line{
+                font-size: 2rem !important;
+                margin-top: 25%  !important;
         }
 
         .phone-hero-action-button{
@@ -526,10 +540,6 @@ export default {
         }
 
         .hero-content-container{
-
-            .hero-first-line{
-                font-size: 2.5rem !important;
-            }
 
             .hero-second-line{
                 font-size: 1.4  rem !important;
@@ -545,10 +555,11 @@ export default {
 
     @media (max-width: 392px){
         .hero-container{
-            background-image: url(~@/assets/Phone-hero-back.svg);
-            background-size: 120% !important;
+            background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
+            background-size: 65%, 100% !important;
             background-position: top !important;
-            height: 800px !important;
+            background-repeat: no-repeat;
+            height: 540px !important;
 
         }
 
@@ -561,7 +572,8 @@ export default {
         .hero-content-container{
 
             .hero-first-line{
-                font-size: 2.5rem !important;
+                font-size: 2.2rem !important;
+                margin-top: 25%  !important;
             }
 
             .hero-second-line{
@@ -578,10 +590,11 @@ export default {
 
     @media (max-width: 380px){
         .hero-container{
-            background-image: url(~@/assets/Phone-hero-back.svg);
-            background-size: 110% !important;
+            background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
+            background-size: 70%, 100% !important;
             background-position: top !important;
-            height: 700px !important;
+            background-repeat: no-repeat;
+            height: 500px !important;
 
         }
 
@@ -599,8 +612,8 @@ export default {
         .hero-content-container{
 
             .hero-first-line{
-                font-size: 2.3rem !important;
-                margin-top: 200px !important;
+                font-size: 2.2rem !important;
+                margin-top: 20%  !important;
             }
 
             .hero-second-line{
@@ -618,10 +631,11 @@ export default {
 
     @media (max-width: 368px){
         .hero-container{
-            background-image: url(~@/assets/Phone-hero-back.svg);
-            background-size: 140% !important;
+            background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
+            background-size: 70%, 100% !important;
             background-position: top !important;
-            height: 670px !important;
+            background-repeat: no-repeat;
+            height: 540px !important;
 
         }
 
@@ -639,8 +653,8 @@ export default {
         .hero-content-container{
 
             .hero-first-line{
-                font-size: 2.3rem !important;
-                margin-top: 200px !important;
+                font-size: 2.2rem !important;
+                margin-top: 20%  !important;
             }
 
             .hero-second-line{
@@ -657,10 +671,11 @@ export default {
     }
     @media (max-width: 340px){
         .hero-container{
-            background-image: url(~@/assets/Phone-hero-back.svg);
-            background-size: 140% !important;
+            background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
+            background-size: 70%, 100% !important;
             background-position: top !important;
-            height: 750px !important;
+            background-repeat: no-repeat;
+            height: 550px !important;
 
         }
 
@@ -679,7 +694,7 @@ export default {
 
             .hero-first-line{
                 font-size: 2.3rem !important;
-                margin-top: 200px !important;
+                margin-top: 20% !important;
             }
 
             .hero-second-line{
