@@ -524,7 +524,7 @@ export default {
             background-size: 60%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
-            height: 600px !important;
+            height: 100vh !important;
 
         }
 
@@ -559,7 +559,7 @@ export default {
             background-size: 65%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
-            height: 540px !important;
+            height: 100vh !important;
 
         }
 
@@ -591,10 +591,10 @@ export default {
     @media (max-width: 380px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 70%, 100% !important;
+            background-size: 80%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
-            height: 500px !important;
+            height: 100vh !important;
 
         }
 
@@ -613,7 +613,7 @@ export default {
 
             .hero-first-line{
                 font-size: 2.2rem !important;
-                margin-top: 20%  !important;
+                margin-top: 35%  !important;
             }
 
             .hero-second-line{
@@ -632,10 +632,10 @@ export default {
     @media (max-width: 368px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 70%, 100% !important;
+            background-size: 75%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
-            height: 540px !important;
+            height: 100vh !important;
 
         }
 
@@ -672,10 +672,10 @@ export default {
     @media (max-width: 340px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 70%, 100% !important;
+            background-size: 80%, 110% !important;
             background-position: top !important;
             background-repeat: no-repeat;
-            height: 550px !important;
+            height: 570px !important;
 
         }
 
@@ -694,7 +694,7 @@ export default {
 
             .hero-first-line{
                 font-size: 2.3rem !important;
-                margin-top: 20% !important;
+                margin-top: 25% !important;
             }
 
             .hero-second-line{
