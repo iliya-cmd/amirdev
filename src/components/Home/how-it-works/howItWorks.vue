@@ -93,7 +93,7 @@ export default {
         margin-top: 0px;
         padding-top: 48px;
 
-        color: #E8496D;
+        color: #F07A6A;
         font-size: 2.5rem;
         font-weight: 700;
         margin-left: 14px;

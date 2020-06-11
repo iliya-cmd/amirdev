@@ -40,7 +40,12 @@ export default {
         { skill: 'Design', width: 78, delay: '700' }
       ]
     }
-  }
+  },
+  beforeCreate(){
+      AOS.init({
+      disable: 'phone'
+      });
+  },
 }
 </script>
 
@@ -63,7 +68,7 @@ export default {
                 margin-bottom: 10px;
 
                 span{
-                    color: #E8496D;
+                    color: #F07A6A;
                     margin-left: 5px;
                     font-size: 2.5rem;
                     font-weight: 700;
@@ -120,7 +125,7 @@ export default {
                         animation-duration: 4s;
                         height: 2px;
                         display: flex;
-                        background-color: #E8496D;
+                        background-color: #F07A6A;
                         background-image: -webkit-gradient(linear, left top, left bottom, from(#f674a4), to(#e06995));
                         background-image: -webkit-linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(121,9,109,1) 65%, rgba(0,111,138,1) 100%);
                         background-image: -moz-linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(121,9,109,1) 65%, rgba(0,111,138,1) 100%);

@@ -34,6 +34,11 @@ export default {
   },
   methods: {
   },
+  beforeCreate(){
+      AOS.init({
+      disable: false
+      });
+  },
   mounted () {
 
     document.addEventListener('aos:in:award', ({ detail }) => {
@@ -167,7 +172,7 @@ export default {
 
                 .number{
                     font-family: 'Roboto', sans-serif !important ;
-                    color: #E8496D;
+                    color: #F07A6A;
                     font-size: 4.5rem;
                     font-weight: 200 !important;
                 }

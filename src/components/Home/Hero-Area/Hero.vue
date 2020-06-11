@@ -22,7 +22,7 @@
                     </p>
                 </button>
 
-                <a  href="#our-works" v-smooth-scroll="{ duration: 1000 }"
+                <a  href="#works" v-smooth-scroll="{ duration: 1500 }"
                 class="hero-seeourwork-button d-flex align-items-center fadeInLeft del-700">
                     <p>
                         <span>
@@ -39,15 +39,17 @@
                     <span>
                         Order your website
                     </span>
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right"
+                    class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
                 </p>
             </button>
 
             <div class="seeourwork-div" >
-                <a href="#our-works" v-smooth-scroll="{ duration: 1000 }">
+                <a href="#works" v-smooth-scroll="{ duration: 1500 }">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" class="fadeInLeft del-1500 svg-inline--fa fa-angle-down fa-w-10 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg>
                 </a>
-                <a href="#our-works" class="see-our-work fadeInLeft del-900" v-smooth-scroll="{ duration: 1000 }">
+                <a href="#works" class="see-our-work fadeInLeft del-900" v-smooth-scroll="{ duration: 1500}">
                     See our works
                 </a>
             </div>
@@ -80,7 +82,7 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
         width: 100% !important;
-        height: 690px;
+        height: 100vh;
         position: relative !important;
         color: #ffffff;
     }
@@ -146,7 +148,7 @@ export default {
 
             span{
                 color: #ffffff;
-                font-size: 19px;
+                font-size: 18px;
                 letter-spacing: 0.005em;
                 font-weight: 500;
 
@@ -388,7 +390,7 @@ export default {
 
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 60%, 100% !important;
+            background-size: 100%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             height: 700px !important;
@@ -399,7 +401,7 @@ export default {
                 font-size: 2.7rem !important;
                 font-weight: 600 !important;
                 width: 100% !important;
-                margin-top: 30%;
+                margin-top: 60%;
                 text-align: center !important;
                 justify-content: center !important;
         }
@@ -436,6 +438,7 @@ export default {
                     display: flex;
                     color: #ffffff;
                     font-family: 'Helvetica', sans-serif;
+                    letter-spacing: 0.02rem;
                     border: none;
                     outline: none;
                     position: relative;
@@ -448,7 +451,7 @@ export default {
                     align-items: center;
                     transition: width 0.5s ease;
                     height: 60px;
-                    width: 45% !important;
+                    width: 47% !important;
 
                     p{
                         margin: 0;
@@ -461,6 +464,7 @@ export default {
                     display: flex !important;
                     border-radius: 5px !important;
                     font-family: 'Helvetica', sans-serif;
+                    letter-spacing: 0.02rem;
                     font-size: 19px;
                     border: none;
                     outline: none;
@@ -473,7 +477,7 @@ export default {
                     justify-content: center;
                     margin-top: 45px;
                     align-items: center !important;
-                    width: 45% !important;
+                    width: 47% !important;
 
                     p{
                         margin: 0;
@@ -492,7 +496,7 @@ export default {
     @media (max-width: 500px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 75%, 100% !important;
+            background-size: 100%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             background-position: top !important;
@@ -502,7 +506,7 @@ export default {
 
         .hero-first-line{
                 font-size: 2.5rem !important;
-                margin-top: 27%  !important;
+                margin-top: 70%  !important;
         }
 
         .phone-hero-action-button{
@@ -521,7 +525,7 @@ export default {
     @media (max-width: 455px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 95%, 100% !important;
+            background-size: 105%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             height: 100vh !important;
@@ -529,8 +533,8 @@ export default {
         }
 
         .hero-first-line{
-                font-size: 26px !important;
-                margin-top: 50%  !important;
+                font-size: 30px !important;
+                margin-top: 63%  !important;
         }
 
         .phone-hero-action-button{
@@ -542,7 +546,7 @@ export default {
         .hero-content-container{
 
             .hero-second-line{
-                font-size: 13px !important;
+                font-size: 16px !important;
             }
         }
 
@@ -556,7 +560,7 @@ export default {
     @media (max-width: 392px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 65%, 100% !important;
+            background-size: 100%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             height: 100vh !important;
@@ -573,7 +577,7 @@ export default {
 
             .hero-first-line{
                 font-size: 2.2rem !important;
-                margin-top: 25%  !important;
+                margin-top: 70%  !important;
             }
 
             .hero-second-line{
@@ -598,9 +602,9 @@ export default {
 
         }
 
-        .hero-phone-buttons{
+        // .hero-phone-buttons{
 
-        }
+        // }
 
 
 
@@ -615,7 +619,7 @@ export default {
 
             .hero-first-line{
                 font-size: 2rem !important;
-                margin-top: 50%  !important;
+                margin-top: 62%  !important;
             }
 
             .hero-second-line{
@@ -634,16 +638,16 @@ export default {
     @media (max-width: 368px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 75%, 100% !important;
+            background-size: 100%, 100% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             height: 100vh !important;
 
         }
 
-        .hero-phone-buttons{
+        // .hero-phone-buttons{
 
-        }
+        // }
 
         .phone-hero-action-button{
             font-size: 11px !important;
@@ -656,7 +660,7 @@ export default {
 
             .hero-first-line{
                 font-size: 2.2rem !important;
-                margin-top: 20%  !important;
+                margin-top: 50%  !important;
             }
 
             .hero-second-line{
@@ -674,16 +678,16 @@ export default {
     @media (max-width: 340px){
         .hero-container{
             background-image: url(~@/assets/Phone-laptop.svg) , url(~@/assets/Phone-back.svg);
-            background-size: 90%, 110% !important;
+            background-size: 100%, 110% !important;
             background-position: top !important;
             background-repeat: no-repeat;
             height: 570px !important;
 
         }
 
-        .hero-phone-buttons{
+        // .hero-phone-buttons{
 
-        }
+        // }
 
         .phone-hero-action-button{
             font-size: 11px !important;
@@ -696,7 +700,7 @@ export default {
 
             .hero-first-line{
                 font-size: 1.8rem !important;
-                margin-top: 37% !important;
+                margin-top: 60% !important;
             }
 
             .hero-second-line{

@@ -164,7 +164,7 @@ export default {
                             font-size: 26px;
                             font-weight: 500;
                             margin-top: 10px;
-                            color: #E8496D;
+                            color: #F07A6A;
                             direction: rtr;
                             text-align: right;
                             margin-left: 0 !important;
@@ -189,16 +189,16 @@ export default {
                     .needs-card-image{
                         display: flex;
                         align-self: center;
-                        -webkit-box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
-                        -moz-box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
-                        box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
-                        border: 1px solid #E8496D;
+                        -webkit-box-shadow: 0px 0px 3px 0px #F07A6A;
+                        -moz-box-shadow: 0px 0px 3px 0px #F07A6A;
+                        box-shadow: 0px 0px 3px 0px #F07A6A;
+                        border: 1px solid #F07A6A;
                         padding: 10px;
                         border-radius: 4px;
                         transition: all 0s ease;
 
                         svg{
-                            color: #E8496D;
+                            color: #F07A6A;
                             font-size: 3rem;
                             transition: all 0s ease;
                         }
@@ -207,7 +207,7 @@ export default {
                     &:hover{
                         .needs-card-image{
                             transform: rotateZ(360deg);
-                            background-color: #E8496D;
+                            background-color: #F07A6A;
                             transition: 0.5s ease;
                             svg{
                                 color: #ffffff;
@@ -230,7 +230,7 @@ export default {
                         h4{
                             font-size: 26px;
                             font-weight: 500;
-                            color: #E8496D;
+                            color: #F07A6A;
                             margin-top: 10px;
                             direction: ltr;
                             text-align: left;
@@ -256,16 +256,16 @@ export default {
                     .needs-card-image{
                         display: flex;
                         align-self: center;
-                        -webkit-box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
-                        -moz-box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
-                        box-shadow: 0px 0px 3px 0px rgba(255,93,115,1);
-                        border: 1px solid #E8496D;
+                        -webkit-box-shadow: 0px 0px 3px 0px #F07A6A;
+                        -moz-box-shadow: 0px 0px 3px 0px #F07A6A;
+                        box-shadow: 0px 0px 3px 0px #F07A6A;
+                        border: 1px solid #F07A6A;
                         padding: 10px;
                         border-radius: 4px;
                         transition: all 0s ease;
 
                         svg{
-                            color: #E8496D;
+                            color: #F07A6A;
                             font-size: 3rem;
                             transition: all 0s ease;
 
@@ -276,7 +276,7 @@ export default {
 
                         .needs-card-image{
                             transform: rotateZ(360deg);
-                            background-color: #E8496D;
+                            background-color: #F07A6A;
                             transition: 0.5s ease;
                             svg{
                                 color: #ffffff;

@@ -104,7 +104,7 @@ export default {
     }
 
     .pinked-growing{
-        color: #E8496D !important;
+        color: #F07A6A !important;
         margin-right: 10px;
         font-weight: bold;
     }
@@ -121,13 +121,14 @@ export default {
         border: none;
         outline: none;
         border-radius: 10px;
-        background-color: #E8496D;
+        background-color: #F07A6A;
         color: #ffffff !important;
         font-size: 18px;
         font-weight: 700;
         transition: 0.3s ease;
         height: 60px;
         transition: all 0.3s ease;
+        box-shadow: 0 10px 10px 0 rgba($color: #F07A6A, $alpha: .14), 0 3px 3px 0 rgba($color: #F07A6A, $alpha: .06);
 
         span{
             margin-right: 15px;
@@ -139,8 +140,7 @@ export default {
         }
 
         &:hover{
-            background-color: #055FDC;
-
+            box-shadow: none;
         }
     }
 

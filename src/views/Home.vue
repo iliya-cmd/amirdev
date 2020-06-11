@@ -29,6 +29,18 @@ import ContactModal from '../components/Home/contact-modal/ContactModal'
 import OurWorks from '../components/Home/our-works/OurWorks'
 
 export default {
+  headful() {
+      return {
+          title: 'AM Portfolio',
+          description: 'A Portfolio website for works designed & developed by Amir Mohseni',
+          keywords: 'website, develope, design, app, laravel, vuejs, backend, forntend'
+      };
+  },
+  beforeCreate(){
+      AOS.init({
+      disable: 'phone'
+      });
+  },
   name: 'Home',
   components: {
     NavBar,

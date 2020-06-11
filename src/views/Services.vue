@@ -25,7 +25,19 @@ import OurWorks from '../components/Home/our-works/OurWorks'
 import OurTopSkills from '../components/About/OurTopSkills'
 
 export default {
-  name: 'Home',
+  headful() {
+      return {
+          title: 'AM Services',
+          description: 'Some of the services provided by Amir Mohseni',
+          keywords: 'responsive, secure, skills, develope, UI / UX, Support, speed, design, server'
+      };
+  },
+  beforeCreate(){
+      AOS.init({
+      disable: 'phone'
+      });
+  },
+  name: 'Services',
   components: {
     NavBar,
     howItWorks,

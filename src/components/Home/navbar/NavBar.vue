@@ -1,6 +1,9 @@
 /* eslint-disable no-trailing-spaces */
 <template>
 <div class="container-fluid">
+    <div class="blur-bg"
+    :class="{ 'dis-none': !hambNav }"
+    @click="toggleNav"></div>
     <nav class="navbar " :class="{ 'blur': bluredBg }">
       <!-- Brand -->
       <div class="d-flex justify-content-center align-items-center nav-logo">
@@ -9,7 +12,7 @@
         </router-link>
       </div>
 
-        <button class="hamburger-toggler" type="button" @click="toggleNav" :class="{'hamb-nav-active': hambNav}">
+        <button class="hamburger-toggler" type="button" @click="toggleNav" :class="{'dis-none': hambNav}">
           <span class="burger-icon"></span>
           <span class="burger-icon"></span>
           <span class="burger-icon"></span>
@@ -31,7 +34,10 @@
 
         <!-- Hamburger Nav Div -->
         <div class="hamb-nav-links-div" v-if="hambNav">
-            <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex flex-column align-items-start" style="padding-left: 30px">
+
+              <span class="close-icon" @click="toggleNav" :class="{'hamb-nav-active': hambNav}"></span>
+              <span class="close-icon" @click="toggleNav" :class="{'hamb-nav-active': hambNav}"></span>
               <div v-for="item in navItems" :key="item.name" class=" hamb-nav-links-row">
                 <router-link class="nav-main-link" :to="item.link" :exact="true"
                 :class="{ 'active-nav-link' : item.active}">
@@ -60,7 +66,6 @@ export default {
     }
   },
   created () {
-    console.log(this.$router.history.current.name)
 
     if( this.$router.history.current.name == "Home"){
       this.bluredBg = false
@@ -91,43 +96,63 @@ $spacer : 10px;
   }
 
   .blur{
-    background-color: rgba($color: #222222, $alpha: 0.5) !important;
+    background-color: rgba($color: #222222, $alpha: 1) !important;
     height: 60px !important;
+  }
+
+  .dis-none{
+    display: none !important;
   }
 
   .hamb-nav-links-div{
     position: absolute;
-    width: 200px;
+    width: 190px;
     display: none;
     right: 0;
     top: 0px;
-    padding-top: 80px ;
-    background-color: rgba($color: #fcfcfc, $alpha: 1);
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 10px;
+    padding-top: 50px;
+    background-color: rgba($color: #222222, $alpha: 1);
     height: 1000px;
     z-index: 90 !important;
+
+    .close-icon{
+      display: none;
+      width: 35px;
+      height: 4px !important;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      background-color: #ffffff;
+      display: block;
+
+      &:nth-child(1){
+        transform: rotateZ( 45deg ) translateY( 3px ) translateX( -1px );
+        // -webkit-transform: ;
+        // -moz-transform: ;
+      }
+
+      &:nth-child(2){
+        transform: rotateZ( -45deg ) translateY( -25px ) translateX( 20px );
+
+      }
+
+    }
   }
 
   .hamb-nav-links-row{
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    padding: 5px 0 ;
-    padding-left: 15px;
-    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.9);
-
-    &:nth-child(1){
-      border-top: 1px solid rgba($color: #000000, $alpha: 0.9);
-    }
+    padding: 0px 0 ;
+    // padding-left: 15px;
 
     &:hover{
-      background-color: rgba($color: #000000, $alpha: 1);
       cursor: pointer;
     }
   }
 
   .hamburger-toggler{
+    position: absolute;
+    right: 28px;
     z-index: 2000;
     border: none;
     outline: none;
@@ -138,6 +163,9 @@ $spacer : 10px;
         outline:none;
     }
     .burger-icon{
+      transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
       background-color: #ffffff;
       display: block;
       width: 35px;
@@ -153,33 +181,26 @@ $spacer : 10px;
 
       }
       &:nth-child(2){
-              height: 4px !important;
+        height: 4px !important;
       }
     }
   }
 
   .hamb-nav-active{
-
-    transform: translateX(-110px);
-    transition: 0.3s;
-    span:nth-of-type(1){
-    transform: rotateZ(45deg) translateY(23px) translateX(10px);
-    background-color: #000000 !important;
-    outline: none;
-
-    }
-
-    span:nth-of-type(2){
-      transform: translateX(200px);
-    }
-
-    span:nth-of-type(3){
-        background-color: #000000 !important;
-        transform: rotateZ(-45deg) translateY(-8px) translateX(-7px);
-
-    }
+      display: flex !important;
+      justify-content: flex-start;
+      align-items: center;
   }
 
+  .blur-bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 100;
+  }
   .container-fluid{
     padding: 0 !important;
     // height: 0 !important;
@@ -262,7 +283,7 @@ $spacer : 10px;
   @media (max-width: 650px) {
     .hamburger-toggler{
       display: block;
-      margin-right:9px !important;
+      padding-right: 0 !important;
 
     }
 
@@ -283,39 +304,44 @@ $spacer : 10px;
       margin-left:15px !important;
     }
 
-    .active-nav-link{
-    color: #000000 !important;
-    border-radius: 10px !important;
-    border: none !important;
-
-    }
-
     .hamb-nav-links-row{
-      height: 50px;
+      height: 60px;
       padding: 0px 0!important;
     }
 
     div nav .hamb-nav-links-div{
-      display: block !important;
+      background-color: #222222;
+      display: flex !important;
+      flex-direction: column;
+      align-items: flex-start;
       // padding-top: 10px !important;
       padding-bottom: 10px !important;
 
-        .router-link-active{
-            // background-color: rgba($color: #ffffff, $alpha: 0.9) !important;
-        }
       .nav-main-link{
         width: 100% !important;
-        height: 50px !important;
-        padding-left: 20px !important;
+        height: 70px !important;
+        padding-left: 0px !important;
+        font-size: 1.02rem;
         border-radius: 0 !important;
-        color: #000000 !important;
+        color: #ffffff ;
 
         &:hover{
-          color: #ffffff !important;
+          color: #68E3F1 !important;
         }
 
+        a.router-link-exact-active{
+            color: #68E3F1 !important;
+        }
 
       }
+
+    }
+
+    a.active-nav-link{
+      color: #68E3F1 !important;
+      border-radius: 10px !important;
+      border: none !important;
+
     }
 
   }

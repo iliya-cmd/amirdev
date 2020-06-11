@@ -1,5 +1,6 @@
 <template>
     <div class="mail-icon-container" @click="showContactModal()"
+    :style="{ display: display }"
     data-aos="fade-left" data-aos-easing="ease" data-aos-delay="100" data-aos-once="true" data-aos-duration="400" data-aos-anchor-placement="bottom-center">
         <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg>
 
@@ -8,6 +9,26 @@
 
 <script>
 export default {
+  data(){
+    return{
+      display: 'flex'
+    }
+  },
+  created () {
+
+    if( this.$router.history.current.name == "Home"){
+
+      this.display = 'none'
+
+      window.addEventListener('scroll', (e) => {
+
+        if( window.pageYOffset > 400) this.display = 'flex'
+        if( window.pageYOffset < 400) this.display = 'none'
+
+      });
+
+    }
+  },
   methods: {
     showContactModal: function () {
       Event.$emit('toggleContactModal')
@@ -32,7 +53,6 @@ export default {
         z-index: 10;
         transition: all .1s ease;
         border: rgba($color: #000000, $alpha: 0.2) 1px solid;
-        opacity: 0.5 ;
 
         .icon{
           color: #000000;
@@ -47,7 +67,7 @@ export default {
 
         &:hover{
             // transition: width 1s;
-            background-color: #E8496D;
+            background-color: #F07A6A;
             transform: scale(1.1) !important;
 
           .icon{

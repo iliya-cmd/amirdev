@@ -56,7 +56,7 @@ export default {
           head2: 'Laravel, API',
           jelly: false,
           icon: ['fab', 'laravel'],
-          content: 'If you wish to SPA website, you will need a Powerful API. laravel has the best performance in this area.'
+          content: 'If you want an SPA, you\'ll need a Powerful API. laravel has the best performance in this area.'
         }
       ]
 
@@ -95,7 +95,7 @@ export default {
                     margin-right: 4px;
                     font-size: 40px;
                     font-weight: bold;
-                    color: #E8496D !important;
+                    color: #F07A6A !important;
                 }
             }
 

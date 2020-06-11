@@ -127,7 +127,7 @@ export default {
     .how-it-works-pinked{
         padding-top: 70px;
         padding-bottom: 40px;
-        color: #E8496D;
+        color: #F07A6A;
         font-size: 40px;
         font-weight: 700;
         margin-left: 14px;

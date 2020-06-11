@@ -118,7 +118,7 @@ export default {
      margin-top: 20px;
      margin-bottom: 20px;
      width: 35px;
-     border: 2px solid #E8496D;
+     border: 2px solid #F07A6A;
      transition: border-color 0.3s;
  }
 
@@ -126,12 +126,12 @@ export default {
     box-shadow: 1px 10px 32px rgba(227,47,86,0.15) !important;
 
      svg{
-       color: #E8496D !important;
+       color: #F07A6A !important;
      }
 
      transform: translateY(-30px);
-     border: 1px solid #E8496D ;
-     color: #E8496D !important;
+     border: 1px solid #F07A6A ;
+     color: #F07A6A !important;
 
  }
 }

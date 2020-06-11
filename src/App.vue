@@ -90,26 +90,23 @@ export default {
 
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-    padding: 0 2px;
-  }
+// ::-webkit-scrollbar {
 
-/* Track */
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
+//   }
 
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #E8496D;
-    border-radius: 10px;
-  }
+// /* Track */
+//   ::-webkit-scrollbar-track {
 
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #E8496D;
-  }
+//   }
+//   /* Handle */
+//   ::-webkit-scrollbar-thumb {
+
+//   }
+
+//   /* Handle on hover */
+//   ::-webkit-scrollbar-thumb:hover {
+
+//   }
 
 #app {
   font-family: 'Helvetica', sans-serif;

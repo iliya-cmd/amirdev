@@ -85,15 +85,20 @@ export default {
       circleColor: '#055FDC'
     }
   },
+  beforeCreate(){
+      AOS.init({
+      disable: 'phone'
+      });
+  },
   methods: {
     changeCircle1: function (index) {
-      this.items1[index].color = '#E8496D'
+      this.items1[index].color = '#F07A6A'
     },
     changeCircleBack1: function (index) {
       this.items1[index].color = '#055FDC'
     },
     changeCircle2: function (index) {
-      this.items2[index].color = '#E8496D'
+      this.items2[index].color = '#F07A6A'
     },
     changeCircleBack2: function (index) {
       this.items2[index].color = '#055FDC'
@@ -134,7 +139,7 @@ export default {
                         cursor: default;
 
                         span{
-                            color: #E8496D;
+                            color: #F07A6A;
                         }
                     }
 

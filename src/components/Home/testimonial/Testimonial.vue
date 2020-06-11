@@ -103,6 +103,7 @@ export default {
 
 <style lang="scss">
     .flickity-container{
+      height: auto !important;
         margin-top: 60px;
         padding-top: 80px;
         padding-bottom: 100px;
@@ -113,6 +114,8 @@ export default {
         background-size: cover;
 
         .testimonial-head{
+          width: 100%;
+          padding: 0 50px;
           margin-bottom: 50px;
 
           .testimonial-head-title{
@@ -122,7 +125,7 @@ export default {
             cursor: default;
 
             .love-us{
-              border-bottom: 3px solid #E8496D;
+              border-bottom: 3px solid #F07A6A;
               font-style: normal;
             }
           }
@@ -279,12 +282,36 @@ export default {
     @media (max-width: 500px){
       .flickity-container{
         margin-top: 0px;
+        // padding-bottom: 100px !important;
       }
 
       .testimonial-container{
         width: 80% !important;
         height: 350px !important;
+        opacity: 1 !important;
 
+      }
+    }
+    @media (max-width: 380px){
+      .flickity-container{
+        padding-bottom: 250px !important;
+      }
+
+      .flickity-container .flickity .flickity-prev-next-button .previous{
+          top: 70% !important;
+      }
+      .flickity-prev-next-button .next{
+          top: 70% !important;
+
+      }
+
+      .testimonial-container{
+        margin-top: 0 !important;
+      }
+    }
+    @media (max-width: 360px){
+      .flickity-container{
+        padding-bottom: 230px !important;
       }
     }
 </style>

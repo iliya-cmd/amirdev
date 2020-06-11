@@ -1,5 +1,5 @@
 <template>
-    <footer class="w-100 d-flex footer-container">
+    <footer class="w-100 d-flex footer-container" :class="{ 'contact-padding' : contactPadding}">
 
         <div class="left-footer">
             <div class="address-section">
@@ -43,13 +43,25 @@
 export default {
   data () {
     return {
+        contactPadding: false
+    }
+  },
+  created () {
+
+    if( this.$router.history.current.name == "Contact"){
+
+      this.contactPadding = true
 
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss">
+
+    .contact-padding{
+        padding-top: 60px !important;
+    }
 
     .footer-container{
         height: auto !important;
@@ -224,6 +236,24 @@ export default {
   }
 }
 
+@media (max-width:564px){
+    .contact-padding{
+        padding-top: 110px !important;
+    }
+}
+
+@media (max-width:400px){
+    .contact-padding{
+        padding-top: 100px !important;
+    }
+}
+
+@media (max-width:360px){
+    .contact-padding{
+        padding-top: 90px !important;
+    }
+}
+
 @media (max-width:570px){
 
     .footer-container{
@@ -231,7 +261,7 @@ export default {
         // width: 100%;
         // background-color: #222222;
         // display: flex;
-        padding: 45px 31px 85px !important;
+        padding: 45px 31px 85px ;
         // justify-content: space-between;
         align-items: center !important;
     }

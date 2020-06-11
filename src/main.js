@@ -12,14 +12,19 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { faLaravel, faVuejs, faCss3Alt, faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Vuelidate from 'vuelidate'
+import vueHeadful from 'vue-simple-headful';
+
 
 library.add(faUserSecret, faCheckCircle, faTimesCircle, faExclamationTriangle, faInfoCircle, faAward, faLayerGroup, faUsers, faFacebook,
   faHeart, faLaravel, faVuejs, faCss3Alt, faServer, faDesktop, faLock, faTachometerAlt, faSyncAlt, faCloudUploadAlt, faPaperPlane, faSpinner,
   faInstagram, faTwitter, faYoutube, faChartLine, faSmileBeam, faHeadset)
 
-require('vue2-animate/dist/vue2-animate.min.css')
-Vue.use(SweetModal)
-Vue.use(vueSmoothScroll)
+  require('vue2-animate/dist/vue2-animate.min.css')
+  Vue.use(SweetModal)
+  Vue.use(vueHeadful);
+  Vue.use(Vuelidate)
+  Vue.use(vueSmoothScroll)
 Vue.config.productionTip = false
 
 window.Event = new Vue()
@@ -29,7 +34,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 new Vue({
   created () {
     AOS.init({
-      disable: 'phone', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       animatedClassName: 'aos-animate', // class applied on animation
       useClassNames: true, // if true, will add content of `data-aos` as classes on scroll
       initClassNames: false,

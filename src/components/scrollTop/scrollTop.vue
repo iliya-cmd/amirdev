@@ -1,5 +1,6 @@
 <template>
     <div class="scrolltop-icon-container"
+    :style="{ display: display }"
     data-aos="fade-left" data-aos-easing="ease" data-aos-delay="100" data-aos-once="true" data-aos-duration="400" data-aos-anchor-placement="bottom-center">
         <a href="#top" v-smooth-scroll="{ duration: 1000}" >
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-up" class="svg-inline--fa fa-angle-up fa-w-10 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"></path></svg>
@@ -9,6 +10,21 @@
 
 <script>
 export default {
+  data(){
+    return{
+      display: 'none'
+    }
+  },
+  created () {
+
+      window.addEventListener('scroll', (e) => {
+        if( window.pageYOffset > 1000) this.display = 'flex';
+
+        if( window.pageYOffset < 1000) this.display = 'none';
+
+      });
+
+  },
   methods: {
     // scrollTop: function () {
     //   Event.$emit('scrollTop')
@@ -58,7 +74,6 @@ export default {
         z-index: 10;
         transition: all .1s ease;
         border: rgba($color: #000000, $alpha: 0.2) 1px solid;
-        opacity: 0.5 ;
         overflow: hidden;
 
         a{
@@ -81,7 +96,7 @@ export default {
 
         &:hover{
             // transition: width 1s;
-            background-color: #E8496D;
+            background-color: #F07A6A;
             transform: scale(1.1) !important;
 
           .icon{

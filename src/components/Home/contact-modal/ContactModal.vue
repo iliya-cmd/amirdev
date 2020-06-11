@@ -9,18 +9,34 @@
             </div>
         </sweet-modal>
 
-        <form action="" class="d-flex"  @submit.prevent="send">
-            <input type="text" placeholder="name" required>
-            <input type="email" placeholder="email" required>
-            <textarea name="message" id="" cols="30" rows="4" placeholder="message"></textarea>
+        <form action="" class="d-flex" @submit.prevent="submit($event)">
+            <input type="text" name="name" placeholder="name" v-model="name" @input="validateName"
+            :style="{ borderBottom: nameBorder }"
+            :class="{ 'pulse': nameAnimation }">
+
+            <p v-if="$v.name.$invalid && nameBorder == '2px solid #d9534f'" class="form-error-txt">Name field requires at least 3 letters</p>
+
+            <input type="email" name="email" placeholder="email" v-model="email" @input="validateEmail" autocomplete="email"
+            :style="{ borderBottom: emailBorder }"
+            :class="{ 'pulse': emailAnimation }">
+
+            <p v-if="$v.email.$invalid && emailBorder == '2px solid #d9534f'" class="form-error-txt">Please Enter a valid E-mail Address</p>
+
+            <textarea name="message" id="" cols="30" rows="4" placeholder="message" v-model="message" @input="validateMessage"
+            :style="{ borderBottom: messageBorder }"
+            :class="{ 'pulse': messageAnimation }">
+            </textarea>
+
+            <p v-if="$v.message.$invalid && messageBorder == '2px solid #d9534f'" class="form-error-txt">Please describe your intention of contact</p>
+
             <div class="button-holder">
 
                 <button type="button" class="cancel-button" @click="closeModal()">
                     Cancel
                 </button>
                 <button class="send-button">
-                    <p v-if="!sending" style="display:flex;justify-content:space-between;align-items:center;width:100%;margin:0;padding:0"
-                    >Send <font-awesome-icon icon="paper-plane" ></font-awesome-icon></p>
+                    <p v-if="!sending"
+                    >Send</p>
                     <font-awesome-icon
 
                             icon="spinner"
@@ -36,6 +52,7 @@
 
 <script>
 import emailjs from 'emailjs-com'
+import { required, minLength, email, maxLength } from 'vuelidate/lib/validators'
 export default {
   data () {
     return {
@@ -48,8 +65,31 @@ export default {
       sentSeccessfully: false,
       sentFailed: false,
       show: 'none',
-      animation: 'none'
+      animation: 'none',
+      name: '',
+      nameBorder: '',
+      nameAnimation: false,
+      email: '',
+      emailBorder: '',
+      emailAnimation: false,
+      message: '',
+      messageBorder: '',
+      messageAnimation: false
     }
+  },
+  validations: {
+        name: {
+            required,
+            minLength: minLength(3)
+        },
+        email: {
+            required,
+            email
+        },
+        message: {
+            required,
+            maxLength: 500
+        },
   },
   created () {
 
@@ -87,6 +127,78 @@ export default {
 
   },
   methods: {
+      validateName(){
+
+          if(this.$v.name.$invalid){
+              this.nameBorder = '2px solid #d9534f'
+          }
+          else{
+              this.nameBorder = ''
+          }
+      },
+      validateEmail(){
+
+          if(this.$v.email.$invalid){
+              this.emailBorder = '2px solid #d9534f'
+          }
+          else{
+              this.emailBorder = ''
+          }
+      },
+      validateMessage(){
+
+          if(this.$v.message.$invalid){
+              this.messageBorder = '2px solid #d9534f'
+          }
+          else{
+              this.messageBorder = ''
+          }
+      },
+      submit(e) {
+        // console.log(e.target.closest('form'))
+
+        this.$v.$touch()
+        this.messageAnimation = false
+        this.emailAnimation = false
+        this.nameAnimation = false
+
+
+        if (this.$v.$invalid) {
+
+            if(this.$v.message.$invalid){
+
+                this.messageAnimation = true
+                this.messageBorder = '2px solid #d9534f'
+
+                setTimeout( () => this.messageAnimation = false
+                ,500)
+
+            }
+
+            if(this.$v.email.$invalid) {
+
+                this.emailAnimation = true
+                this.emailBorder = '2px solid #d9534f'
+
+                setTimeout( () => this.emailAnimation = false
+                ,500)
+
+            }
+
+            if(this.$v.name.$invalid) {
+                this.nameAnimation = true
+                this.nameBorder = '2px solid #d9534f'
+
+                setTimeout( () => this.nameAnimation = false
+                ,500)
+            }
+
+
+        }
+        else {
+            this.send(e)
+        }
+    },
     closeModal() {
         this.animation = 'lightSpeedOut'
 
@@ -106,7 +218,7 @@ export default {
         .then((result) => {
           this.sentSeccessfully = true
           this.alert.type = 'success'
-          this.alert.txt = 'Congrats! You took your first Step to expand your Buisness'
+          this.alert.txt = 'Congrats! \n You took your first Step to expand your Buisness'
           this.alert.color = '#4CAF50'
           this.$refs.alert.open()
           e.target.reset()
@@ -115,7 +227,7 @@ export default {
         .catch( error  => {
           this.sentFailed = true
           this.alert.type = 'error'
-          this.alert.txt = 'Sorry! An Error Has occured during sending the E-mail. Please try  again later.'
+          this.alert.txt = 'Sorry! \n An Error Has occured during sending the E-mail. Please try  again later.'
           this.alert.color = '#F44336'
           this.$refs.alert.open()
           console.log('FAILED...', error)
@@ -134,7 +246,7 @@ export default {
     right: 5%;
     bottom: 75px;
     width: 350px;
-    height: 361px;
+    min-height: 400px;
     z-index: 1000000;
     padding: 30px;
     border-radius: 4px;
@@ -146,17 +258,29 @@ export default {
         width: 100%;
         justify-content: space-between;
         align-items: flex-start;
-        height: 311px;
+        height: 340px;
+        padding-bottom: 15px;
         z-index: 1000000;
+
+        .form-error-txt{
+            font-size: 0.8rem;
+            font-size: 400;
+            color: #d9534f;
+            // margin-top: 5px;
+            text-align: left;
+        }
 
 
         input{
             width: 100%;
+            margin-bottom: 4px;
+            -webkit-appearance: none;
             border: 1px solid hsla(0, 0%, 65%, 0.4);
             border-radius: 5px;
             background-color: transparent;
             padding: 12px;
             font-size: 14px;
+            animation-duration: 0.3s;
 
             &:focus{
                 outline: none;
@@ -165,22 +289,23 @@ export default {
                 animation-duration: 0.3s;
 
                 &::placeholder{
-                    color: #225E9B !important;
+                    color: hsla(0, 0%, 65%, 0.4) !important;
                     -webkit-transform: translateX(10px);
                     -moz-transform: translateX(10px);
+                    transform: translateX(10px);
                   }
             }
 
             &::-webkit-input-placeholder{
                 transition: all 0.3s ease;
-                color: #101010 ;
+                color: hsla(0, 0%, 65%, 0.4);
                 font-weight: 200 ;
                 font-size: 0.9rem;
             }
 
             &::-ms-input-placeholder{
                 transition: all 0.3s ease;
-                color: #101010 !important;
+                color: hsla(0, 0%, 65%, 0.4) !important;
                 font-weight: 200 !important;
                 font-size: 0.9rem;
             }
@@ -188,11 +313,16 @@ export default {
 
         textarea{
             width: 100%;
+            -webkit-appearance: none;
             border: 1px solid hsla(0, 0%, 65%, 0.4);
             border-radius: 5px;
+            margin-bottom: 4px;
+            resize: none;
             background-color: transparent;
             padding: 12px;
             font-size: 14px;
+            animation-duration: 0.3s;
+
 
             &:focus{
                 outline: none;
@@ -200,22 +330,23 @@ export default {
                 animation-name: pulse;
                 animation-duration: 0.3s;
                 &::placeholder{
-                    color: #225E9B !important;
+                    color: hsla(0, 0%, 65%, 0.4) !important;
                     -webkit-transform: translateX(10px);
                     -moz-transform: translateX(10px);
+                    transform: translateX(10px);
                   }
             }
 
             &::-webkit-input-placeholder{
                 transition: all 0.3s ease;
-                color: #101010 ;
+                color: hsla(0, 0%, 65%, 0.4) ;
                 font-weight: 200 ;
                 font-size: 0.9rem;
             }
 
             &::-ms-input-placeholder{
                 transition: all 0.3s ease;
-                color: #101010 !important;
+                color: hsla(0, 0%, 65%, 0.4) !important;
                 font-weight: 200 !important;
                 font-size: 0.9rem;
             }
@@ -223,36 +354,41 @@ export default {
 
         .button-holder{
             width: 100%;
+            margin-top: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             .cancel-button{
                 border: none;
-                background-color: transparent;
-                width: 80px;
+                border: 2px solid transparent;
+                background:
+                linear-gradient(to right, #ffffff, #ffffff),
+                linear-gradient(to right, #F07A6A , #E8496D);
+                background-clip: padding-box, border-box;
+                background-origin: padding-box, border-box;
+                width: 131px;
                 outline: none;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 10px 15px;
-                border: solid 1px #FD5D73;
-                border-radius: 4px;
-                color: #FD5D73;
+                padding: 8px 15px;
+                border-radius: 5px;
+                color: #F07A6A;
                 font-size: 1rem;
                 transition: all 0.3s ease-in-out;
                 font-weight: 600;
 
                 &:hover{
-                    width: 120px;
-                    background-color: #FD5D73;
-                    color: #ffffff;
+                    box-shadow: 0 10px 10px 0 rgba($color: #F07A6A, $alpha: .14), 0 3px 3px 0 rgba($color: #F07A6A, $alpha: .06);
+
                 }
+
             }
 
             .send-button{
-                width: 105px;
-                background-color: transparent;
+                width: 131px;
+                background: linear-gradient(to right, #2B92E1 , #68E3F1);
                 letter-spacing: 0.1rem;
                 border: none;
                 outline: none;
@@ -260,22 +396,24 @@ export default {
                 justify-content: center;
                 align-items: center;
                 padding: 10px 15px;
-                border: 1px solid #225E9B;
-                border-radius: 4px;
-                color: #225E9B;
+                border-radius: 5px;
+                color: #ffffff;
                 font-size: 1rem;
                 font-weight: 600;
                 transition: all 0.3s ease-in-out;
 
-                &:hover{
-                    width: 140px;
-                    background-color: #225E9B;
-                    color: #ffffff;
+                p{
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    letter-spacing: 0.02rem;
+                    width:100%;
+                    margin:0;
+                    padding:0
+                }
 
-                    .loading{
-                        color: #ffffff !important;
-                        font-size: 1.4rem !important;
-                    }
+                &:hover{
+                    box-shadow: 0 10px 10px 0 rgba($color: #2B92E1, $alpha: .14), 0 3px 3px 0 rgba($color: #2B92E1, $alpha: .06);
                 }
             }
         }
@@ -283,7 +421,7 @@ export default {
 }
 
 .loading{
-    color: #225E9B;
+    color: #ffffff;
     font-size: 1.4rem;
     animation:
         loading-rotate 1s infinite both;
