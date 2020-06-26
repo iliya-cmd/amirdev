@@ -33,7 +33,7 @@ export default {
           head1: 'Design',
           head2: 'Bootstrap, Tailwind, Bulma',
           jelly: false,
-          content: 'we can use any css framework you wish.tailwind, Bulma, Bootstrap.'
+          content: 'I can use any CSS framework you wish. tailwind, Bulma, Bootstrap.'
           // bgColor: 'transparent',
           // iconColor: '#FF5D73'
         },
@@ -49,14 +49,14 @@ export default {
           head2: 'Vue js, React',
           jelly: false,
           icon: ['fab', 'vuejs'],
-          content: 'Vue Js and React js are the fastest frontend frameworks which facebook and instagram use too.'
+          content: 'VueJs and React are the fastest frontend frameworks which facebook and instagram use too.'
         },
         {
           head1: 'Api',
           head2: 'Laravel, API',
           jelly: false,
           icon: ['fab', 'laravel'],
-          content: 'If you want an SPA, you\'ll need a Powerful API. laravel has the best performance in this area.'
+          content: 'If you want an SPA, you\`ll need a powerful Api. Laravel has the best performance in this area.'
         }
       ]
 

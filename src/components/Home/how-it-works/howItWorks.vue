@@ -35,32 +35,28 @@ export default {
           head2: 'Design',
           icon: 'desktop',
           delay: 200,
-          summerized: 'Our Web Applications are Responsive on every deviece. today one of the biggest factors in google ranking is the responsiveness of your web site',
-          content: 'Our Web Applications are Responsive on every deviece. today one of the biggest factors in google ranking is the responsiveness of your web site so it Greatly increases your SEO.'
+          content: 'My web applications are responsive on every device. Today one of the biggest factors in google ranking is the responsiveness of your web site so it Greatly increases your SEO.'
         },
         {
           head1: 'Secure',
           head2: 'Back end',
           icon: 'lock',
           delay: 400,
-          summerized: 'We Provide a highly Secure server side code. Many Tests will be initialized on your web site before we put it into',
-          content: 'We Provide a highly Secure server side code. Hackers are everywhere these days so you need a secure site to show that you are Professional.'
+          content: 'I provide a highly secure server side code. Hackers are everywhere these days so you need a secure site to show that you are Professional.'
         },
         {
           head1: 'Speed',
           head2: 'Optimization',
           icon: 'tachometer-alt',
           delay: 600,
-          summerized: 'Having a Fast responding site does a major effect on UI part of your web site. the user wont stay at your site if its slow',
-          content: 'Having a Fast responding site does a major effect on UI part of your web site. the user wont stay at your site if its slow. so you want the best responding time cause it\'s Terrible for Your SEO'
+          content: 'Having a fast responding site does a major effect on UI part of your web site. The user wont stay at your site if its slow. So you want the best responding time cause it\'s terrible for your SEO'
         },
         {
           head1: 'Respond',
           head2: 'Fast',
           icon: 'sync-alt',
           delay: 800,
-          summerized: 'SPA sites are growing every day. in these sites, at most of the parts you dont need to refresh the page',
-          content: 'SPA sites are growing every day. in these sites, at most of the parts you dont need to refresh the page. The Requests get sent by an Ajax request and user see\'s the respond immediatly.'
+          content: 'SPA sites are growing every day. In these sites, at most of the parts you dont need to refresh the page. The requests get sent by an Ajax request and user see\'s the respond immediatly.'
         }
       ]
     }

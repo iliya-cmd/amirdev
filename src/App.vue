@@ -113,7 +113,7 @@ export default {
   text-align: center;
   // height: 100%;
   color: #ffffff;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.01rem;
 }
 
 ::placeholder{

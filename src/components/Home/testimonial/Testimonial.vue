@@ -55,14 +55,14 @@ export default {
       testimonials: [
         {
           name: 'Angela Paul',
-          text: 'Perfect Feed Back. every day i got reports of the progress. Loved the support.',
+          text: 'Perfect feed back. Every day I got reports of the progress. Loved the support.',
           rate: 5,
           img: '/images/testi-2.jpg'
         },
 
         {
           name: 'Clifford Baily',
-          text: 'started with a very specific plan and finished Extactly at the time we agreed from the begining.',
+          text: 'Started with a very specific plan and finished extactly at the time we agreed from the begining.',
           rate: 4,
           img: '/images/testi-4.jpg'
         },
@@ -75,7 +75,7 @@ export default {
 
         {
           name: 'Robert Padbury',
-          text: 'handled all the work for me and they provided all the features i desired with no bug at all.',
+          text: 'handled all the work for me and he provided all the features I desired with no bug at all.',
           rate: 4,
           img: '/images/testi-1.jpg'
         },
@@ -103,7 +103,7 @@ export default {
 
 <style lang="scss">
     .flickity-container{
-      height: auto !important;
+        height: 120vh !important;
         margin-top: 60px;
         padding-top: 80px;
         padding-bottom: 100px;
@@ -248,10 +248,18 @@ export default {
     @media (max-width: 760px){
       .flickity-container{
         margin-top: 0px;
-      }
 
-      .testimonial-container{
-        width: 45% !important;
+
+        .testimonial-container{
+          width: 45% !important;
+        }
+
+        .testimonial-head{
+
+            .testimonial-head-title{
+              font-size: 2.1rem;
+            }
+        }
       }
     }
 
@@ -268,15 +276,65 @@ export default {
     @media (max-width: 545px){
       .flickity-container{
         margin-top: 0px;
+
+        .testimonial-head{
+          margin-bottom: 10px !important;
+
+            .testimonial-head-title{
+              font-size: 1.9rem;
+            }
+        }
       }
 
       .testimonial-container{
         width: 75% !important;
       }
+
+      .testimonial-head{
+        padding: 0 10px;
+      }
     }
 
-    .testimonial-head{
-      padding: 0 10px;
+
+    @media (max-width: 516px){
+
+      .flickity-container{
+        height: 120vh !important;
+
+        .testimonial-text{
+          font-size: 1.1rem !important;
+          line-height: 1.7rem !important;
+        }
+      }
+
+    }
+
+    @media (max-width: 411px){
+
+      .flickity-container{
+        height: 115vh !important;
+
+        .testimonial-head{
+
+            .testimonial-head-title{
+              font-size: 1.7rem;
+            }
+
+            .testimonial-head-sub{
+              font-size: 1.1rem;
+
+            }
+        }
+      }
+
+    }
+
+    @media (max-width: 372px){
+
+      .flickity-container{
+        height: 145vh !important;
+      }
+
     }
 
     @media (max-width: 500px){

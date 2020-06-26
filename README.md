@@ -1,5 +1,5 @@
-# xtra-theme
-
+# Porfolio
+A Portfolio website for presenting the works of Amir Mohseni. ( made with Vue js )
 ## Project setup
 ```
 npm install

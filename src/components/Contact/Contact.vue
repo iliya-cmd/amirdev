@@ -14,7 +14,7 @@
 
               </a>
 
-                <p class="contact-txt">Contact us</p>
+                <p class="contact-txt">Contact me</p>
 
             </div>
 

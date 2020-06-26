@@ -5,8 +5,8 @@
             <div class="d-flex flex-column"
             data-aos="fade-left" data-aos-easing="ease" data-aos-delay="100" data-aos-once="true" data-aos-duration="400">
                 <h3>Helping You <span class="pinked-growing">Grow</span> You'r Business</h3>
-                <p>We Help you're business to Grow, By Building a Professional website. A Greate Site, is Essential for your business to Become well known.
-                    Plus, having a good UI and UX turns your visitors to Permanant Clients.
+                <p>I help you're business to grow by building professional websites. A greate website, is essential for your business to become well known.
+                    Plus, having a good UI and UX turns your visitors to permanant clients.
                 </p>
                 <button class="bulid-your-buisness" @click="openModal()">
                     <span >

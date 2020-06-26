@@ -6,9 +6,9 @@
                     <h3>About <span>Me</span></h3>
                     <p>Building Amazing Sites</p>
                 </div>
-                <p >I have a great Passion about writing codes and designing websites. Design and Programing are the two things i realy love and it's not just a way of earning income for me.
+                <p >I have a great passion about writing codes and designing websites. Design and programing are the two things i realy love and it's not just a way of earning income for me.
                     I always try to figure out what my customer wants and not neccessairly what they say because sometimes the customer doesn't know how to exactly express their expectations
-                    of the site. So after several years of dealing with customer i immediatly figure out their wishes.</p>
+                    of the site. So after several years of dealing with customer I immediatly figure out their wishes.</p>
             </div>
             <div class="about-our-team-img" data-aos="fade-left"  data-aos-easing="ease-in" data-aos-duration="900" data-aos-once="true">
                 <div class="about-our-team-img-holder">
@@ -30,7 +30,7 @@
                     <h3>My <span>Goals</span></h3>
                     <p>Deliver the best service possible</p>
                 </div>
-               <p>I dont want my customers to regret the money they paid because more than money, i care about my overall rate. Therefor i try to fulfill any request the client has tesing them! The
+               <p>I dont want my customers to regret the money they paid because more than money, I care about my overall rate. Therefor I try to fulfill any request the client has tesing them! The
                    benefit of this is the clients recommendation for me to other employers.
                </p>
                 <div class="d-flex w-100 justify-content-center circle-check-container">

@@ -5,8 +5,8 @@
         data-aos="fade-right" data-aos-delay="300" data-aos-once="true" data-aos-duration="600" >
 
             <h3>My Top <span>Skills</span></h3>
-            <span>I use all the skills i know for your site</span>
-            <p>I've learned many skills over years of practice and i continue my study because in this particular profession, it's never enough! each day theres a new technology out there and customers always want the top technologies of the time being.</p>
+            <span>I use all the skills I know for your site</span>
+            <p>I've learned many skills over years of practice and I continue my study because in this particular profession, it's never enough! Each day theres a new technology out there and customers always want the top technologies of the time being.</p>
 
         </div>
 

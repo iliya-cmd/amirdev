@@ -37,10 +37,6 @@ export default {
       type: String,
       required: true
     },
-    summerized: {
-      type: String,
-      required: true
-    }
   }
 }
 </script>

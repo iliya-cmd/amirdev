@@ -4,8 +4,8 @@
     >
         <div class="our-work-header d-flex flex-column"
         data-aos="fade-up" data-aos-easing="ease" data-aos-delay="100" data-aos-once="true" data-aos-duration="400">
-            <h3 class="our-work-heading">Let's <span>Take a look </span>at Our Works</h3>
-            <span class="our-work-heading-sub">Web sites we Developed</span>
+            <h3 class="our-work-heading">Let's <span>Take a look </span>at My Works</h3>
+            <span class="our-work-heading-sub">Web sites I Developed</span>
         </div>
 
         <Flickity ref="flickity"
