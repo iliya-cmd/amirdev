@@ -265,9 +265,9 @@ export default {
 
     .our-work-container{
 
-        min-height: 110vh;
+        min-height: 102vh;
         margin-bottom: 100px;
-        padding-top: 80px;
+        padding-top: 40px;
         padding-bottom: 80px;
     }
 
@@ -299,7 +299,7 @@ export default {
     }
 
     .flickity{
-        height: 450px !important;
+        height: 300px !important;
         overflow: visible !important;
         border-radius: 10px;
         margin-bottom: 150px;
@@ -438,7 +438,7 @@ export default {
         .our-work-card{
             width: 450px !important;
             height: 270px !important;
-            margin: 120px 10px 30px;
+            margin: 50px 10px 30px;
         }
 
         .flickity-button {

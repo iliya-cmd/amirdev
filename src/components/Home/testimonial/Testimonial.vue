@@ -66,26 +66,26 @@ export default {
           rate: 4,
           img: '/images/testi-4.jpg'
         },
-        {
-          name: 'Tom Synnott',
-          text: 'A professional developer. I now have a super fast site which is still perfect even after 2 years.',
-          rate: 4.5,
-          img: '/images/testi-5.jpg'
-        },
 
-        {
-          name: 'Robert Padbury',
-          text: 'handled all the work for me and he provided all the features I desired with no bug at all.',
-          rate: 4,
-          img: '/images/testi-1.jpg'
-        },
 
         {
           name: 'Debora kay',
           text: 'Experienced the best service ever with a very reasenible price. ',
           rate: 5,
           img: '/images/testi-3.jpg'
-        }
+        },
+        {
+          name: 'Robert Lee',
+          text: 'handled all the work for me and he provided all the features I desired with no bug at all.',
+          rate: 4,
+          img: '/images/testi-1.jpg'
+        },
+        {
+          name: 'Matt Wilson',
+          text: 'A professional developer. I now have a super fast site which is still perfect even after 2 years.',
+          rate: 4.5,
+          img: '/images/testi-5.jpg'
+        },
       ]
     }
   },
@@ -103,7 +103,7 @@ export default {
 
 <style lang="scss">
     .flickity-container{
-        height: 120vh !important;
+        height: 110vh !important;
         margin-top: 60px;
         padding-top: 80px;
         padding-bottom: 100px;
